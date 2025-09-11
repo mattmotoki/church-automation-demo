@@ -16,9 +16,9 @@ PORT = int(os.environ.get("PORT", 8000))
 # CORS settings
 ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://church-documentation-automation.vercel.app",
-    "https://church-documentation-automation-mattmotokis-projects.vercel.app",
-    "https://church-documentation-automation-production.up.railway.app",
+    "http://localhost:3001",
+    "https://church-automation-demo.vercel.app",
+    "https://church-automation-demo-mattmotokis-projects.vercel.app",
 ]
 
 # File paths
