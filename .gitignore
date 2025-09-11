@@ -9,6 +9,7 @@ __pycache__/
 
 # Next.js
 .next/
+tsconfig.tsbuildinfo
 
 # System files
 .DS_Store
