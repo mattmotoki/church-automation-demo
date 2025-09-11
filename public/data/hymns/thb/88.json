@@ -1,0 +1,40 @@
+{
+  "hymn_number": 88,
+  "title": "Himi 88",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "’Eiki ‘ofa ke u lava’i\n‘A e loto ongo;\nPea u mapelu hifo ai,\n‘Eiki ‘i ho ‘ao."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Pea u fakatonuhia\n‘A e ‘Afiona;\nPea u loto tetetete\n‘I ho’o Folofola."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Pea u tangi lo’imata,\n‘I he’eku hia;\nPea u loto mafōfoa,\nPea u angavaivai."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea u mamahi lahi,\n‘I he’eku ‘ilo;\n‘Oku ke houhau mo’oni,\nKi he angahala."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Sīsū ke ke foaki mai,\nKi he hia ko au;\n‘A e mamahi mo’oni,\nMo e loto ongo."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "’A e mamahi ko ia\nTe ke mālie ai;\n‘I he hoko hoku ‘aho,\nPea u hiki atu."
+    },
+    {
+      "page_name": "Verse 7",
+      "text": "Pea ke fakahaofi au,\n‘I ho ‘aho lahi;\nPea fai tapuekina\nHoku laumālie."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

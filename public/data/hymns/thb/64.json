@@ -1,0 +1,36 @@
+{
+  "hymn_number": 64,
+  "title": "Himi 64",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Ko e toki me’a lahi\nFakamanavahē,\n‘A e houhau ‘a e ‘Eiki\nKi he anga hia."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Ko e kakai ta’e tui\nKi he’ene ‘ofa,\nPea mate ta’e liliu\n‘I he’enau hia."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Te nau mole ki he potu\nNa’e fua teu’i\nKi he tēvolo, mo ‘ene\nKau ‘āngelo kovi."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea ‘e vela ma’u ai pē\n‘A e angahala,\nNa’e mate ta’e hoko\nKi honau ‘Otua."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Te nau ‘aitu fakataha,\nMo e kau tēvolo,\n‘I he luo afi vela\nKuo punusia."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Ko e totoni totonu\n‘O e angahala,\nKo e mate ‘angaua\nPea ta’engata."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

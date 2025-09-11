@@ -1,0 +1,28 @@
+{
+  "hymn_number": 450,
+  "title": "Himi 450",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Haʻu kia Sīsū, ha’u kia Sīsū,\nKāinga ‘oku kumi.\nHa’u kia Sīsū, ha’u kia Sīsū\nTe ne fakamo’ui."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Ha’u he pō ni, ha’u he pō ni,\n‘Oua na’a tatali.\nHa’u kia Sīsū, ha’u kia Sīsū\nTe mo fetaulaki."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Ha’u ‘o vete, haʻu ‘o vete,\nHo’mou ngaahi hia.\nHaʻu kia Sīsū, ha’u kia Sīsū\nTe ne hūfekina."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Tui leva, tui leva\nKi he ta’ata’a.\nHa’u kia Sīsū, ha’u kia Sīsū,\nTe ne fakama’a."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

@@ -1,0 +1,40 @@
+{
+  "hymn_number": 323,
+  "title": "Himi 323",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "’E hoku kāinga,\nKe tau tokanga\nKi he me’a ni,\n‘Oku tau ‘aunofo, ‘i he māmani."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Ko hotau ‘api,\nMei he ‘Eiki,\nKo ‘etau Tamai\n‘Oku ‘i hēvani, pea tu’uma’u pē."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "’Oku foaki,\n‘A e ‘api ni,\n‘E hotau ‘Eiki;\nKi he’ene fānau, kuo tupu fo’ou."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Ke tau fai fo’ou,\nHotau fononga,\nKi hotau ‘api na;\n‘I he huafa, ‘o hotau ‘Eiki."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "’Oku fekau mai,\n’E hotau ‘Eiki,\nKe tau tokanga,\nKi hotau ‘api na, ‘oku ta’engata."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Ke tau li’aki,\n‘A māmani,\nMo hono lelei,\nPea tau tui, ki hotau ‘Eiki."
+    },
+    {
+      "page_name": "Verse 7",
+      "text": "Ko e fonua,\n‘O hotau ‘Eiki\n‘Oku tau kumi;\n‘Oku tu’u ma’u ai pē, ‘a hono lelei."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

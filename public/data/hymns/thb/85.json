@@ -1,0 +1,32 @@
+{
+  "hymn_number": 85,
+  "title": "Himi 85",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "’Oku fakatou fai\nKe fakamo’oni;\nHotau laumālie, mo e\nLaumālie lelei."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "’Oku tau mo’ui\n‘I he Laumālie\n‘O hotau ‘Otua lelei\nPea angatonu."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Pea tau talia\n‘Ene ngaahi fekau,\nPea muimui ma’u pē\nKi he Folofola."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Ko ‘etau feinga\n‘Oku lahi taha,\nKe fakafiemālie\nKi hotau ‘Otua."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Pea tupu hake\n‘I he manavahē\nMo e loto lelei lahi\n‘O mā’oni’oni."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

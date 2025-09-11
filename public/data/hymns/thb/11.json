@@ -1,0 +1,36 @@
+{
+  "hymn_number": 11,
+  "title": "Himi 11",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Ko e toki me’a eni\nKe tau fie ‘ilo\nKo e ‘ofa ‘a e ‘Eiki\nKia kitautolu."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "‘Oku fakahā ‘e ia\nKapau te tau kumi,\nKo e mo’oni te tau ma’u\n‘A ‘ene tapuaki."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Ko e fakamolemole\n‘Etau ngaahi hia\n‘I he tui kia Sīsū\nPea fai ma’u ai pē."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea ke tau tonuhia\n‘I he’etau tui,\nPea tau fiemālie\nPea tau mo’ui."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Pea fakaongo lelei\n‘A ‘ene ‘Afio\n‘I he’etau fai ma’u ai pē\nKi he’ene fekau."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Pea maamangia ma’u pē\nHotau laumālie\n‘Ia Sīsū ko e maama\n‘O māmani ia."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

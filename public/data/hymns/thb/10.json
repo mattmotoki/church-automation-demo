@@ -1,0 +1,36 @@
+{
+  "hymn_number": 10,
+  "title": "Himi 10",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "’A e kakai mafasia\nPea loto vaivai,\nMou ha’u leva kia Sīsū\nNa’e kalusefai."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "‘Oku folofola ia\nKi he tu’utāmaki,\nKe nau ha’u kiate ia.\nKe nau mo’ui ai."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "‘Oua na’a talangata’a\nKi he’ene ui,\nKa mou fai talangofua\nPea ke mou tui."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Ko e kaho volu koe\nMo e filo kohu,\nKo e pani ‘uli fōfō\nPea ta’e ‘aonga?"
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "‘E ‘ikai te ne motuhi\n‘A e kaho volu,\nPe tāmate’i ke ‘osi\n‘A e filo kohu."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "He ko e ‘Eiki ko Sīsū\n‘Oku anga’ofa\nKi he kakai loto feinga\nMo fakatomala."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

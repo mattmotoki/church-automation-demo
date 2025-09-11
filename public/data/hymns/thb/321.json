@@ -1,0 +1,24 @@
+{
+  "hymn_number": 321,
+  "title": "Himi 321",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "’I he ha’u ki Saione, ‘a hotau Misaia;\nKe ne fakamo’ui, ‘a e kakai hia,\nNa’e ‘ikai masiva, ‘i he fakamālō,\nHe na’e fai hosana, ‘e he ngaahi fānau:\nTau hiva hosana, hosana, hosana,\nHosana, ki hotau ‘Eiki."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Pea ‘oku kei ‘ofa, ki he fānau iiki,\n‘A e ‘Eiki ko Sīsū, ‘i he maama lelei,\nTau fa’a fakataha, ke tau ā’i ia,\n‘O fai ‘etau hosana, ki hotau Misaia,\nTau hiva hosana, hosana, hosana,\nHosana, ki hotau ‘Eiki."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "He kapau te tau vaivai, ‘i hono fakahā;\n‘A e ongoongo lelei, ‘a hotau Misaia.\n‘E hiki honau le’o, ‘e he ngaahi maka.\n‘O fai honau hosana, ko hotau fakamā.\nTau hiva hosana, hosana hosana,\nHosana ki hotau ‘Eiki."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

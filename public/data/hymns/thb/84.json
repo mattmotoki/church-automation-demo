@@ -1,0 +1,36 @@
+{
+  "hymn_number": 84,
+  "title": "Himi 84",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "’Oku tau fakahā\nHono ngaahi fua\nPea muimui atu\nKi hotau ‘Otua."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Ko e angavaivai\nMo e angamalū\n‘A ia na’e hā lahi\n‘I hotau Huhu’i."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Pea vahe ia\n‘E he laumālie\nPea ko e ngaahi fua\n‘O e kakai tui."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea kuo liliu\nHotau loto kovi,\nPea kuo fakafo’ou\nPea lelei lahi."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Ko e ngāue ia\n‘A e Laumālie\nPea ‘oku kau mo ia\nHotau laumālie."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Ke fakamo’oni\n‘I hotau loto ni\nKuo hao ‘o mo’ui\nHotau laumālie."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

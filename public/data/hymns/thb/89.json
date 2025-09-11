@@ -1,0 +1,32 @@
+{
+  "hymn_number": 89,
+  "title": "Himi 89",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Kuo tuku ‘e he Tamai\n‘A e Laumālie lelei\nKia Sīsū ko e ‘Alo,\nKo hotau fakamo’ui."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Pea na’e pani’aki\n‘O lahi ‘aupito hake;\n‘I he kakai kotoa pē\n‘O taau mo e ‘Eiki tauhi."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Pea na’e ‘ia Sīsū\n‘A e loto ‘o e Tamai\nKe ne fakahā totonu,\n‘I he ngaahi me’a lahi."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "‘A e kakai angahala.\nKe mou fai talangofua\nKi he fekau angatonu,\n‘O hotau ‘Otua ‘ofa."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Kuo tō ‘a e matapā\n‘O homou fale pōpula;\nKo e mata kai ‘o Sīsū\n‘A māmani kotoa pē."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

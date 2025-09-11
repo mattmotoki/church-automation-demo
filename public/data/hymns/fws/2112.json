@@ -1,0 +1,24 @@
+{
+  "hymn_number": 2112,
+  "title": "Jesus Walked This Lonesome Valley",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Jesus walked this lonesome valley;\nhe had to walk it by himself.\nOh, nobody else could walk it for him;\nhe had to walk it by himself."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "We must walk this lonesome valley;\nwe have to walk it by ourselves.\nOh, nobody else can walk it for us;\nwe have to walk it by ourselves."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "You must go and stand your trial;\nyou have to stand it by yourself.\nOh, nobody else can stand it for you;\nyou have to stand it by yourself."
+    }
+  ],
+  "hymnal": "fws",
+  "author": "",
+  "composer": "",
+  "tune_name": "LONESOME VALLEY",
+  "text_copyright": "Public Domain",
+  "tune_copyright": "Public Domain"
+}

@@ -1,0 +1,24 @@
+{
+  "hymn_number": 2217,
+  "title": "By the Babylonian Rivers",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "By the Babylonian rivers\nwe sat down in grief and wept;\nhung our harps upon a willow,\nmourned for Zion while we slept."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "There our captors, in derision,\ndid require of us a song;\nso we sat with staring vision\nand the days were hard and long."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "How shall we sing the Lord's song\nin a strange and bitter land;\ncan our voices veil the sorrow?\nLord God, hear your lonely band."
+    }
+  ],
+  "hymnal": "fws",
+  "author": "Ewald Bash",
+  "composer": "",
+  "tune_name": "KAS DZIEDAJA",
+  "text_copyright": "© 1964 The American Lutheran Church, reprinted by permission of Augsburg Fortress",
+  "tune_copyright": "Public Domain; Trad. Latvian melody"
+}

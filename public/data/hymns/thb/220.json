@@ -1,0 +1,40 @@
+{
+  "hymn_number": 220,
+  "title": "Himi 220",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Ke tau fa’a fakafeta’i,\nKi he ‘Eiki lelei,\n‘O e Sāpate, pea tau\nFakataha foki."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Mo e kakai monū’ia,\n‘Oku fai ma’u ai pē;\n‘I he hiva faimālie\n‘A e mālōlō ma’u."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "‘Oku nau tauhi ma’u ai pē\nPea mālie ai,\n‘A e Sāpate tonu,\n‘I he maama lelei."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea ‘i he’emau pehē,\nPea manatu’i,\n‘Eiki, ki he ‘Afiona,\n‘Oku mau tupu ai."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Na’e hā ‘i he ‘Otua,\nKo e Folofola,\n‘A e mana lahi taha,\n‘I he ‘aho tapu."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "’Oku toetu’u, ‘a ia\nNa’a ne fakatau;\n‘A e kakai angahala,\n‘I he ongosia."
+    },
+    {
+      "page_name": "Verse 7",
+      "text": "Ko e fakatupu, ‘a e\nMaama na’e ‘ikai\n‘Oku lahi, kae lahi\nHake, ke Huhu’i."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

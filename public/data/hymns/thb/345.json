@@ -1,0 +1,32 @@
+{
+  "hymn_number": 345,
+  "title": "Himi 345",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "’Oku fakahā totonu,\n‘E hotau ‘Otua,\nKuo u tuku ‘i Saione,\n‘A e maka tu’unga."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Ko e fu’u maka koloa,\nPea mahu’inga,\nNa’e ‘ahi’ahi ia,\nKa ‘oku tu’uma’u pē."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Ko e tu’unga totonu,\nKi hono Siasi;\nPea fiemālie ai,\n‘A e kakai tui."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Ko e kalofanga ia,\nKi he halaia;\n‘Oku malu ia ma’u pē,\nPea ta’engata."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Ko ia ‘oku tui ma’u\n‘E ‘ikai mā ia,\nKa ‘e hao, ‘o mo’ui,\nHono laumālie."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

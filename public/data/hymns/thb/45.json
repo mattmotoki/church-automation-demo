@@ -1,0 +1,36 @@
+{
+  "hymn_number": 45,
+  "title": "Himi 45",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Ko e mo’oni fau\n‘E hoko ‘o mate\n‘A hoku sino lelei ni\nPea popo ia?"
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Pea ‘e tuku pē\n‘I he kelekele\n‘A e ngaahi kupu lelei\n‘O hoku sino ni?"
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Ka ‘e ‘ikai mole\n‘A e ngaahi kupu,\nHe ko hono teu’i ia\nKi he toetu’u."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea fakafo’ou\nKo e sino lelei,\nPea ‘e toe hū ki ai\nHoku laumālie."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "He ‘oku mo’ui\n‘A hoku Huhu’i,\nPea ‘oku ne le’ohi,\nHoku ngaahi efu."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Pea te ne fekau\nKe toetu’u ia,\n‘I he lelei ta’engata\nFakalaumālie."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

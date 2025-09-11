@@ -1,0 +1,40 @@
+{
+  "hymn_number": 77,
+  "title": "Himi 77",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "’Eiki ke ke fakafo’ou\n‘A hoku mālohi,\nHe koe loto vaivai au\nMo e tu’utamaki."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "’Oku ou feinga ke u ma’u\n‘A e angatonu,\nMo e mālohi ‘i loto\n‘I he fakafo’ou."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Pea u lava atu,’Eiki\nKi he ‘Afiona,\n‘I he tui ‘o e loto\nPea u fai ma’u ai pē."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea ‘i he’eku tui\nPeau tonuhia,\nPea u ma’u ‘a e melino\nMo hoku ‘Otua."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "’Eiki ko e ngāue ‘a ‘au\nKe fakafo’ou au,\nPea u tukuange ni au\nKi he ‘Afiona."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "’E ‘ikai te u kei faaki\nKi he’eku ngāue,\nKa ki he ngāue ‘a ‘au\nKo e fakalelei."
+    },
+    {
+      "page_name": "Verse 7",
+      "text": "‘Oku ke tu’u ‘i he vaha’a\n‘O e Tamai mo au\nKo hoku fakalaloa,\n‘I he’eku hia."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

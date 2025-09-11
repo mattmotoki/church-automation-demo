@@ -1,0 +1,32 @@
+{
+  "hymn_number": 456,
+  "title": "Himi 456",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Fakafeta’i e ‘alo’ofa,\nHotau ‘Eiki ko Sihova.\nHaleluia! Haleluia!"
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Tā ko eni pē e ‘ofa!\n‘Ene foaki hono Foha.\nHaleluia! Haleluia!"
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Hili ki ai ‘a e angahala,\nKe ne totongi ‘etau mala.\nHaleluia! Haleluia!"
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Ko e Lami ‘a e ‘Otua\nKu\no\nne vete hotau mo’ua.\nHaleluia! Haleluia!"
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Fakafeta’i! ‘Ilonga ha tui,\nKu\no\n‘a’ana ‘a e mo’ui.\nHaleluia! Haleluia!"
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

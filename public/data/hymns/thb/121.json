@@ -1,0 +1,32 @@
+{
+  "hymn_number": 121,
+  "title": "Himi 121",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "’E hoku ‘Otua koe\nTupu’anga koe;\nMo hono mo’ui’anga,\n‘O e fiefia."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Ko hoku ‘aho ngingila,\nPea lelei lahi;\n‘Oku ‘i he ‘Afiona,\nMo ‘eku pō lelei."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Kapau ‘e fakahā koe\n‘I he pōpō’uli;\n‘E maamangia ai leva.\nHoku laumālie."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Ko hoku fetu’u’aho,\n‘A e ‘Afiona.\nPea ko e la’ā ulo,\nKi he laumālie."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "‘Oku ulo ‘e he langi\n‘O takatakai au;\n‘I he ngaahi huelo ni\n‘O e fiefia."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

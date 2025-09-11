@@ -1,0 +1,32 @@
+{
+  "hymn_number": 65,
+  "title": "Himi 65",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "’Oiauē ‘e fēfē’i\nKo e hā ‘e hoko?\nTeu lava’i ki he lelei\nPe tō ki he kovi?"
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "’E toho au fakataha\nMo e kau lilika,\nKi he fakamāu’anga\n‘O hoku ‘Otua."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Pea u tu’u mo kinautolu\nKi he fu’u mama’o\n‘I he nima to’ohema\n‘I he manavahē?"
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea u tali tetetete\nPea u fakaongo,\nKi he lea faka’ilo\n‘Eku mala’ia."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "‘E ‘ikai, ka teu kumi ni,\nKi hoku ‘Otua,\nPea u tafoki ‘o kole\nKi he’ene ‘ofa."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

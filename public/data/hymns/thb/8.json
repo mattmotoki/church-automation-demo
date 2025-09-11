@@ -1,0 +1,40 @@
+{
+  "hymn_number": 8,
+  "title": "Himi 8",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "’A e kakai angahala\nKe mou tokanga mai,\nKi he fekau ‘a e ‘Eiki\nKia kimoutolu."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Mou kumi kia Sihova\nKo homou ‘Otua,\n‘I homou kei ‘ilo ia\n‘Oku tali ‘ofa."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Mou lotu kiate ia\n‘I he’ene ofi,\nVete homou ngaahi hia\n‘I he angavaivai."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea ke li’aki leva\n‘E he angakovi,\n‘A hono hala ‘o’ona\nPea tafoki mai."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Pea mo e angahia\nKe li’aki ia\n‘A ‘ene ngaahi mahalo,\nTa’e angatonu."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Pea ke tafoki ia\nKia Sihova ni\nPea ki hotau ‘Otua\nPea lotu ki ai."
+    },
+    {
+      "page_name": "Verse 7",
+      "text": "Pea te ne ‘alo’ofa\nPea fai ke lahi,\n‘Ene fakamolemole\n‘Ene ngaahi kovi."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

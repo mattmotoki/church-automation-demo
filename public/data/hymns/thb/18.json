@@ -1,0 +1,32 @@
+{
+  "hymn_number": 18,
+  "title": "Himi 18",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Ko e ‘ofeina\nKuo nau hokosi\n‘I lalo ni, hono tupu\n‘O e kolōlia."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "‘A e ngaahi fua,\n‘Oku tāu mo e\nMaama, ‘oku ‘i ‘olunga\nPea ta’engata."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Ko ia ke tau fai,\n‘A e hiva lahi;\nHiva pea fai ma’u ai pē\n‘O ‘ikai ke tangi."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "He ‘oku tau ‘alu\n‘I loto fonua\n‘O hotau ‘Eiki totonu\nKo ‘Imanuela."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Ki he ngaahi maama\nMatamata lelei.\n‘I he potu ‘i ‘olunga\n‘I he loto langi."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

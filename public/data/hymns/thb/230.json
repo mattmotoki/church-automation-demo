@@ -1,0 +1,28 @@
+{
+  "hymn_number": 230,
+  "title": "Himi 230",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Ko e kakai kuo liliu,\n‘I he Laumālie;\nKe tau hiva fakataha,\nPea fakafeta’i."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Tau hiva, pea kalanga,\n‘I he fiefia;\nPea fakaongo atu,\n‘A hotau ‘Otua."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Ke tau fai ‘a e pole’o\nTau le’o, mo Sīsū,\nPea tau tokanga hake,\nKi he maama lelei."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea tali teuteu atu,\nHotau laumālie;\nKi he maama ‘i ‘olunga\n‘Oku ‘aho ma’u pē."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

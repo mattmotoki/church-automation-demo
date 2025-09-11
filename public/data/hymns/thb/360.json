@@ -1,0 +1,28 @@
+{
+  "hymn_number": 360,
+  "title": "Himi 360",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Ko e fieinu au,\nSīsū, kiate koe;\nKo e matavai koe,\nPea mo’ui ma’u pē,\n‘Eiki fakama’a au,\nMei he’eku hia."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Ka ne tafe ma’u ai pē,\n‘A hoku lo’imata,\nPea u feinga ma’u pē,\nKe u fai ki he ngāue;\n’E ‘ikai te nau ‘aonga,\nKe fakama’a hia."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Ko e angahia au,\nPea mo e masiva,\nKa ‘oku ou piki ma’u,\n‘Eiki, ki ho kolosi,\nSīsū fakamo’ui,\n‘A hoku laumālie."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea ke malu’i au,\n‘I he’eku mo’ui.\nPea mo ‘eku mate,\nKe ke ungaki’i au,\n‘E Sīsū, anga’ofa,\nKe ke taukapo’i au."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

@@ -1,0 +1,32 @@
+{
+  "hymn_number": 30,
+  "title": "Himi 30",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Pea hao leva\n‘A e laumālie\nPea fiefia\nPea fakafeta’i\n‘I he’ene ‘ilo loto\n‘A e ‘ofa ‘a e ‘Eiki."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Kuo huhu’ia\nHoku laumālie\nPea u ongosia\n‘I he’eku hia,\nPea u tui kia Sīsū\nPea u fiemālie ai."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Ko e toki ‘ofa\nFakamanavahē\n‘A hotau ‘Otua\nKi he kakai hia,\nPea ko e hao’anga\nKi māmani kotoa pē."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Na’e kalusefai\n‘A hoku ‘Otua\nPea pekia ai\nKo e fetongi au,\nPea ko e hifo ia\nKi māmani kotoa pē."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Ka ne ‘iate au\n‘A e le’o lahi\nPea u lea ‘aki\nKi he anga kovi\n‘O māmani kotoa pē\nKe nau fai mo kumi ki ai."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

@@ -1,0 +1,36 @@
+{
+  "hymn_number": 4,
+  "title": "Himi 4",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "‘Oku ai ha katoanga\nKuo teu ‘e he ‘Otua,\nMa’a e kakai mavisa\n‘I māmani kotoa pē."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Pea ‘oku ‘ia Sīsū\nKo e ‘Alo, hono tauhi,\nPea ‘oku tāu mo ia\nKo e ‘Eiki lelei lahi."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Ko e tala katoanga\n‘A ‘ene kau talafekau,\nKi he kakai ‘oku mo’ua\n‘I he’enau ‘angahia."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Mou ha’u ki he katoanga\n‘A e kau tu’utamaki,\nKuo teu ‘e he ‘Otua\n‘I he’ene Kosipeli."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "‘A e kau mo’ulaloa\n‘I he ngaahi ‘angahala,\nMou ha’u ki he katoanga\nKuo teu mo’omoutolu."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Mou ha’u ‘o ma’u ‘ia Sīsū\n‘A e fakamolemole,\nPea mo e loto fo’ou\nMo e Laumālie lelei."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

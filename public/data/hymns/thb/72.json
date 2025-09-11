@@ -1,0 +1,32 @@
+{
+  "hymn_number": 72,
+  "title": "Himi 72",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Ko e maama ‘a Sihova\n‘A e Tohitapu,\nPea hangē ko e la’ā\n‘Oku ulo ma’u pē."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Ko e maama’anga ia\nKi he laumālie\nPea mo e poto’anga\nKi he loto vale."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Koe’uhi ke tau ‘ilo\n‘A e finangalo\n‘O hotau ‘Otua lelei\nKia kitautolu."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea ko e me’a ako\n‘A e Folofola\nKe tau hoko ai ‘o ‘ilo\n‘A hotau ‘Otua."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "‘Eiki fa’ai ho mau loto\nPea ke mau ‘ilo,\nHono ‘uhinga totonu\n‘O e Folofola."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

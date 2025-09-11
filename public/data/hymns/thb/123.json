@@ -1,0 +1,36 @@
+{
+  "hymn_number": 123,
+  "title": "Himi 123",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "’Eiki ke tau talanoa,\nMo e ‘Afiona;\n‘I he’emau ‘alu fano,\n‘I he maama kovi."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Pea ke Folofola mai,\nKi homau loto ni;\nPea ke fakatupu ai,\n‘A ho’o ‘ofa ‘Eiki."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "‘I he’etau alea ‘Eiki,\nMo e ‘Afiona;\n‘Oku mau fakangalo’i,\n‘E mau ngaahi me’a."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "‘Eiki, kapau ‘oku tau kau\nMo e ‘Afiona;\n‘E lelei pē ‘a e ngāue,\nMo ‘emau mamahi."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "‘E hoku ‘Otua lelei,\nKe ke ‘Afio mai,\n‘O fekau ki homau loto,\nKe mau fiefia."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "‘E tokanga hoku loto\n‘Eiki ki ho le’o;\nPea u puna ke fai leva,\n‘A ho finangalo."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

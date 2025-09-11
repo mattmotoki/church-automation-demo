@@ -1,0 +1,32 @@
+{
+  "hymn_number": 7,
+  "title": "Himi 7",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Ke mou fakaongo\n‘A e Lami lelei,\n‘A hotau ‘Otua\nKo e hifo ia;\nHe kuo hokosia mai\n‘A e ta’u ‘o e Siupeli."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "‘A e kau pōpula\nKi he angahala,\nMo heli, mou ma’u\nHomou ‘atāina;\nHe kuo hokosia mai\n‘A e ta’u ‘o e Siupeli."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Pea ke mou nofo\n‘O fiemālie\n‘I ho’omou tui\nKi he Eiki lelei;\nHe kuo hokosia mai\n‘A e ta’u ‘o e Siupeli."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Mo kimoutolu na\nNa’a mou fakatau,\n‘A homou ‘api tō\nMou ha’u ‘o toe ma’u;\nHe kuo hokosia mai\n‘A e ta’u ‘o e Siupeli."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Ko e fu’u ‘ofa\n‘Ofa tu’unga’a pē,\n‘A Sīsū totonu\nKo hotau Huhu’i;\nHe kuo hokosia mai\n‘A e ta’u ‘o e Siupeli."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

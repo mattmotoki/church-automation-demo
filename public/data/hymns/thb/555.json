@@ -1,0 +1,36 @@
+{
+  "hymn_number": 555,
+  "title": "Himi 555",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Hanga mai mei langi, ‘Eiki,\nKi he hū ha tamasi’i:\n‘Oua te ke ta’etoka’i,\nKa ke ‘alo’ofa mai."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "‘Oku vale hoku loto,\nFaka’ilo mai ha poto:\nNaʻa ke tamasi’i ‘i mu’a,\nTauhi pē ki ho’ mātu’a."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Tamasi’i ‘o Nāsaleti.\nAko mai ho’ fai lelei\nPea u fakahōifua\n‘A e kakai mo e ‘Otua."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Tamasi’i ‘o Nasaleti,\nNa’a ke lau ‘a e a, e, i, ;\nPoupou hoku loto foki,\nKe u sipela ‘a e lēsoni."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Tamasi’i ‘o Nāsaleti,\nTuku mai ho’ fai e’ehi;\nKe u fehi’a ki he kovi,\nHe lea ‘uli mo e loi."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Tamasi’i ‘o Nāsaleti,\nNaʻa ke fonu he kelesi;\n‘Omi foki ke u ‘aonga,\n‘Ofa ki he meʻa kotoa."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

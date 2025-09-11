@@ -1,0 +1,24 @@
+{
+  "hymn_number": 2145,
+  "title": "I've Got Peace Like A River",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "I've got peace like a river,\nI've got peace like a river,\nI've got peace like a river in my soul.\n<br>I've got peace like a river,\nI've got peace like a river,\nI've got peace like a river in my soul."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "I've got joy like a fountain,\nI've got joy like a fountain,\nI've got joy like a fountain in my soul.\n<br>I've got joy like a fountain,\nI've got joy like a fountain,\nI've got joy like a fountain in my soul."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "I've got love like an ocean,\nI've got love like an ocean,\nI've got love like an ocean in my soul.\n<br>I've got love like an ocean,\nI've got love like an ocean,\nI've got love like an ocean in my soul."
+    }
+  ],
+  "hymnal": "fws",
+  "author": "",
+  "composer": "",
+  "tune_name": "PEACE LIKE A RIVER",
+  "text_copyright": "Public Domain",
+  "tune_copyright": "Public Domain"
+}

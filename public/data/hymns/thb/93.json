@@ -1,0 +1,32 @@
+{
+  "hymn_number": 93,
+  "title": "Himi 93",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "’Eiki ‘oku mau ongo’i,\nHomau vaivai’anga;\nKo ‘emau tokanga kovi,\nKi he me’a maama."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "’A ia ko e ngaahi me’a,\nNa’e Fakatupu;\nKo e ngaahi me’a olo\nKi he Laumālie."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "’Oku ne ue’i lahi,\nPea mālie ai;\nKa ‘oku ne fakahee’i\n‘A e laumālie."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "’Oku mau nofo pehē pē\nPea vale lau pē;\nMo ‘ene ha’ele hifo,\n‘A homau Huhu’i."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Pea fakaakeake\n‘A e kakai mate;\nPea mau ongo’i leva,\nKuo mau mo’ui."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

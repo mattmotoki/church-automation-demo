@@ -1,0 +1,40 @@
+{
+  "hymn_number": 13,
+  "title": "Himi 13",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Ko e me’a lelei lahi,\nPea angatonu,\nKi he kakai kotoa pē\nKe kau ki he lotu."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Ko e lotu Folofola\n‘A hotau ‘Otua\nKo e koloa totonu\nKi he laumālie."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "He ‘oku fai ‘a e lotu\n‘A hotau ‘Otua,\nHangē ko e Folofola\n‘A ‘ene ‘Afio."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "He ko hono fakama’unga\n‘A e Folofola,\nMo hono faka’ilonga\nKe tau ‘ilo ia."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Ko e afo kuo falō\n‘A e Folofola,\nKo e me’a fua ia\nKi he laumālie."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "‘Oku tupu ‘i he lotu,\n‘A hotau ‘Otua\n‘A e poto ke tau ‘ilo,\n‘A ‘ene ‘Afio."
+    },
+    {
+      "page_name": "Verse 7",
+      "text": "’Oku ngāue ‘i loto\n‘A e Folofola,\n‘O ne fakatupu fo’ou\n‘A e angahala."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

@@ -1,0 +1,28 @@
+{
+  "hymn_number": 49,
+  "title": "Himi 49",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "’A e kau taupo’ou\nFakalaumālie,\nMo e kakai mate\nMou ‘ā ‘o tu’u hake;\nPea ‘utu ‘a e lolo\nKe fonu ai homou ipu."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Ke mou ‘oho hake\n‘I he fu’u kalanga,\nKuo fakaongo,\n‘I he tu’apō;\nVakai ko e ‘Eiki ta’ane\n‘Oku teu hā’ele hifo."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "‘Oku hā’ele mai\nKe fakakātoa,\n‘A e ngaahi kakai\nKi he fakamaau;\nPea hiki ki he lelei,\n‘Akinautolu na’e teu’i."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Ko kolōlia\n‘A ia kuo teu,\n‘E homou ‘Otua\n‘I he’ene ‘ofa;\nKo kimoutolu kuo teu,\nMou ‘alu atu pea ma’u."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

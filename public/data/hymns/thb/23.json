@@ -1,0 +1,40 @@
+{
+  "hymn_number": 23,
+  "title": "Himi 23",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Vakai ki he ‘Eiki lelei\nKo hotau Huhu’i,\nNa’e pekia mamahi,\nKe tau mo’ui ai."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Na’e hilifaki ia\nKi he funga ‘akau,\nKo e hifo angatonu\n‘I he ‘etau hia."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Na’e lahi ‘ene ‘ofa\nKia kitautolu,\nNa’a mate ‘angaua\nHotau laumālie."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea tangi le’o lahi\nKi he’ene Tamai,\nPea toki tuku hake\nHono laumālie."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Pea toki punou hifo\n‘A hono fofonga,\nPea pekia ‘a Sīsū\nKo hotau fetongi."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Ka te ne motuhi vave\nHono ha’isia\n‘E he mate, pea hao\nPea nāunāu’ia."
+    },
+    {
+      "page_name": "Verse 7",
+      "text": "‘E Lami ‘a e ‘Otua\n‘Oku pehe ni fau,\nHa mamahi pe ha ‘ofa\n‘O hangē ko koe."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

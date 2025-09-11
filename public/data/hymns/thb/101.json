@@ -1,0 +1,44 @@
+{
+  "hymn_number": 101,
+  "title": "Himi 101",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Pea ka tafoki,\n‘A e angahala;\nMei hono hala kovi,\nKi hono ‘Otua."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "’O fakatomala,\n‘I he’ene hia;\n‘E ‘ikai tōmui ia\nKa te ne lava’i."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Ko e unga’anga,\nKi he halaia;\n‘A e ta’ata’a ‘o Sīsū,\nKe nau mālu’ia."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea ke nau ‘ilo,\nHonau houa lelei;\nPea nau hoko ‘o tui,\nKe nau mo’ui ai."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Na’a ke pekia,\nMa’a e angahala;\nKe nau hoko kotoa pē,\nKi honau ‘Otua."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Kuo ke fakamaau,\n‘A e fuakava;\nPea fakapapau ‘aki,\n‘A ho ta’ata’a."
+    },
+    {
+      "page_name": "Verse 7",
+      "text": "Ko e kakai tui,\nKi he ‘Afiona;\nPea hangahanga fai pē,\n‘O a’u ki he mate."
+    },
+    {
+      "page_name": "Verse 8",
+      "text": "Pea ‘e hao ia\nPea ta’engata;\nHe ‘oku tu’uma’u ‘aupito,\n‘A e fuakava."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

@@ -1,0 +1,36 @@
+{
+  "hymn_number": 250,
+  "title": "Himi 250",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Ko e Laumālie mo’oni,\n‘A hotau ‘Otua,\n‘Oku lahi, pea lelei,\nPea ma’olunga."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Pea ‘oku fakataha,\n‘A e Toko Tolu,\n‘I he anga toputapu,\n‘O hotau ‘Otua."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Ko e Tamai, mo e ‘Alo,\nMo e Laumālie,\nKo honau faka’ilonga,\nPea fai ma’u ai pē."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "’Oku ‘Otua tatau pē,\nPea ‘Eiki tatau;\n‘Oku fefiofi lelei,\nPea ta’engata."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "’Oku māfimafi ma’u pē,\nPea anga’ofa;\nPea mā’oni’oni ma’u,\nPea poto ma’u pē."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Ko eni, ‘a e Otua,\nKe tau kumi ki ai;\nPea ke tau tauhi ia,\nKa tau mo’ui ai."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

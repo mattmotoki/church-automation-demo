@@ -1,0 +1,32 @@
+{
+  "hymn_number": 17,
+  "title": "Himi 17",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Te ne tuku hifo\n‘A hono mālohi,\nKo hotau fetuku hake\nKi ‘olunga foki."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Tau mamata ‘i ai,\nKi hono fofonga\nPea ‘e ‘ikai toe fai\n‘A e angahala."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Pea tau inu ai\n‘I hono vaitafe,\n‘A e fiefia lahi\nPea ta’engata."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "‘Io, pea ‘i he\n‘Ikai hoko ki ai,\nKa ko e ‘amanaki pē\nKi he lelei pehē."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "‘Oku tupu mei ai\n‘A e fiefia,\n‘I he lelei ‘oku pehe\nPea ta’engata."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

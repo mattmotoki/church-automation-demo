@@ -1,0 +1,32 @@
+{
+  "hymn_number": 5,
+  "title": "Himi 5",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "’Oku ui ‘a e ‘Eiki\n‘I he’ene ‘ofa,\nKi he kakai tu’utāmaki\n‘I he’enau hia."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Pea ‘oku finangalo\n‘A ‘Ene ‘Afio\nKe tafoki kotoa pē\n‘A e angahala."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Mo e kau foki ki mui\nPea tō ki lalo\n‘Oua na’a mou li’aki\nHomou laumālie."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "He ‘oku kau ‘a e lea\n‘A hotau ‘Otua,\nKi he kakai kuo hinga\n‘I he angahala."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "‘Oku pehē mai ‘e ia,\nKe mou toe kumi,\nHe ‘oku ou anga’ofa\nKe mou mo’ui ai."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

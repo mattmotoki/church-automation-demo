@@ -1,0 +1,40 @@
+{
+  "hymn_number": 2081,
+  "title": "Thank You, Jesus",
+  "lyrics": [
+    {
+      "page_name": "English",
+      "text": "Thank you, Jesus, amen.\nThank you, Jesus, amen.\nThank you, Jesus, amen.\nAlleluia, amen."
+    },
+    {
+      "page_name": "Zulu",
+      "text": "Siyabonga, Jesu.\nSiyabonga, Jesu.\nSiyabonga, Jesu.\nHalleluya, amen."
+    },
+    {
+      "page_name": "kiSwahili",
+      "text": "Asante Yesu, amin.\nAsante Yesu, amin.\nAsante Yesu, amin.\nHaleluya, amin."
+    },
+    {
+      "page_name": "siTwana",
+      "text": "Rea leboga, amen.\nRea leboga, amen.\nRea leboga, amen.\nHaleluya, amen."
+    },
+    {
+      "page_name": "French",
+      "text": "Merci, Jésus, amen.\nMerci, Jésus, amen.\nMerci, Jésus, amen.\nAlléluia, amen."
+    },
+    {
+      "page_name": "German",
+      "text": "Dank'sei dir, o Jesus.\nDank'sei dir, o Jesus.\nDank'sei dir, o Jesus.\nHalleluya. Amen"
+    },
+    {
+      "page_name": "Spanish",
+      "text": "Gracias, Jesús, amén.\nGracias, Jesús, amén.\nGracias, Jesús, amén.\nAleluya, amén."
+    }
+  ],
+  "hymnal": "fws",
+  "author": "",
+  "composer": "",
+  "tune_name": "TINO TENDA",
+  "text_copyright": "© 1996 General Board of Global Ministries, GBCMusik",
+  "tune_copyright": "© 1996 General Board of Global Ministries, GBGMusik"
+}

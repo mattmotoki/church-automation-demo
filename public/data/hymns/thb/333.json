@@ -1,0 +1,36 @@
+{
+  "hymn_number": 333,
+  "title": "Himi 333",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Kapau ‘oku ue’i au,\n‘E he me’a ‘o māmani,\nKe u hoko ai ki he ngāue,\n‘Eiki, ‘oku ke ‘ilo’i!"
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Ko e ‘ofa ‘a Kalaisi,\n‘Oku fa’a ue’i au;\nKe u kumi, ke fakahaofi,\n‘A e kāinga kuo hē."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Kau fa’a fai, pea u tangi,\nPea u feinga ke u hamusi;\n‘A e ngaahi laumālie,\nMei he luo ko heli."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Kapau ‘e manuki’i au,\n‘I he me’a ‘oku ou fai;\n‘Eiki, ke ke tokoni au,\nPea u fie mālie ai."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Pea kapau ‘oku ‘aonga,\n‘Eiki, ki ho’o ngāue,\n‘Eku mo’ui ko eni,\nKe ke fa’iteliha ki ai."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "‘I he’eku ma’u tokoni,\n‘Eiki, ‘i he ‘Afiona,\nPea u ngāue fai ma’u ai pē\nKo ho fakamo’oni au."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

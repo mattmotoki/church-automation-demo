@@ -1,0 +1,330 @@
+{
+  "book": "LUK",
+  "book_name": "Luke",
+  "chapter": 1,
+  "version_id": 1307,
+  "url": "https://www.bible.com/bible/1307/LUK.1",
+  "verses": [
+    {
+      "verse": 1,
+      "text": "‘E Tiofilusi, ko e me‘a ‘i he hanga ‘e he tokolahi, ‘o nau fa‘u hano fakamatala ‘o e ngaahi me‘a ‘oku mātu‘aki tui ki ai ‘e kitautolu,"
+    },
+    {
+      "verse": 2,
+      "text": "‘o fakatatau ki hono tala mai ‘e kinautolu na‘a nau sio tonu ki ai mei hono kamata, ‘o hoko ko e kau ngāue ‘o e folofola,"
+    },
+    {
+      "verse": 3,
+      "text": "kuo u fakakaukau mo au foki, Tangata‘eiki, ke tohi hokohoko ia, ma‘au, he kuo u fakatotolo mai kotoa pē ke mahu‘ingamālie:"
+    },
+    {
+      "verse": 4,
+      "text": "koe‘uhi ke ke ‘ilo kānokano ki he mo‘oni ‘o e ngaahi fakamatala, ‘a ia na‘e akonekina ai koe."
+    },
+    {
+      "verse": 5,
+      "text": "Tokua ‘i he kuonga ‘o Hēlota, ko e Tu‘i Siutea, na‘e ‘i ai ha taula‘eiki na‘e hingoa ko Sākalaia, ‘a ia na‘e kau ki he lakanga ‘o ‘Apaia: pea na‘e ai hono uaifi, ‘a ia na‘a ne ‘i he hako totonu ‘o ‘ēlone, pea na‘a ne ma‘u ‘a e hingoa ko ‘Ilisapesi."
+    },
+    {
+      "verse": 6,
+      "text": "Pea ko e ongo me‘a na‘e lelei ‘ena fakafeangai ki he ‘Otua, he‘ena laka ‘i he ngaahi fekau mo e tu‘utu‘uni kotoa pē ‘a e ‘Eiki mo e haohaoa."
+    },
+    {
+      "verse": 7,
+      "text": "Pea na‘e ‘ikai ha‘ana tama, koe‘uhi na‘e pa‘a ‘a ‘Ilisapesi; pea kuo na mātutu‘a fakatou‘osi pē."
+    },
+    {
+      "verse": 8,
+      "text": "Pea ko e ‘aho ‘e taha na‘a ne fai ‘ene ngāue fakataula‘eiki ki he ‘Otua ‘i he hokohoko ‘o hono lakanga;"
+    },
+    {
+      "verse": 9,
+      "text": "pea ‘i he talotalo, ‘o fakatatau ki he anga ‘o e ngāue fakataula‘eiki, na‘e tō kiate ia ‘a e tutu ‘o e ‘inisēnisi ‘i he‘ene hū ki he Fale Tapu ‘o e ‘Eiki:"
+    },
+    {
+      "verse": 10,
+      "text": "pea na‘e lotu ‘i tu‘a ‘a e fakataha kotoa, ‘i he hokosia ‘a e taimi ‘o e fai ‘inisēnisi."
+    },
+    {
+      "verse": 11,
+      "text": "Pea na‘e hā kiate ia ha ‘āngelo ‘a e ‘Eiki, ‘o tu‘u ‘i he potu to‘omata‘u ‘o e ‘ōlita tutu‘anga ‘inisēnisi."
+    },
+    {
+      "verse": 12,
+      "text": "Pea na‘e tāfu‘ua ‘a Sākalaia ‘i he‘ene sio ki ai; pea tō kiate ia ha ilifia."
+    },
+    {
+      "verse": 13,
+      "text": "Ka ka lea ki ai ‘a e ‘āngelo ‘o ne pehē, ‘e Sākalaia, ‘oua ‘e manavahē; he kuo tau ho‘o hū, pea ko ho uaifi ko ‘Ilisapesi, te ne fanau‘i ha tama kiate koe, pea te ke fakahingoa ia ko Sione."
+    },
+    {
+      "verse": 14,
+      "text": "Pea te ke fiefia ai mo nēkeneka: ‘io, ‘e fiefia ha tokolahi ‘i he‘ene hoko mai."
+    },
+    {
+      "verse": 15,
+      "text": "He te ne hoko ko e lahi ‘i he vakai ‘a e ‘Eiki; pea ‘e ‘ikai ‘aupito te ne inu ha uaine pe ha kava mālohi; pea te ne fonu ‘i he laumālie Mā‘oni‘oni, ‘o kamata mei he manava ‘o ‘ene fa‘ē."
+    },
+    {
+      "verse": 16,
+      "text": "Pea te ne fakatafoki ha tokolahi ‘o ha‘a ‘Isileli ki he ‘Eiki ko honau ‘Otua:"
+    },
+    {
+      "verse": 17,
+      "text": "‘a ia te ne fakamelomelo foki ki ai ‘i he tatau ‘o e anga mo e ivi ‘o ‘Ilaisiā: koe‘uhi ke ne liliu ‘a e loto ‘o e mātu‘a ke tokanga ki he‘enau fānau, pea mo e kau talangata‘a ke nau ma‘u ‘a e anga fakapotopoto ‘o e kau angatonu; ke teu‘i ma‘a e ‘Eiki ‘a e kakai ne tokonaki."
+    },
+    {
+      "verse": 18,
+      "text": "Pea pehē ‘e Sākalaia ki he ‘āngelo. Te u ‘ilo ‘i he hā ‘a e me‘a ni? He ko au ko e motu‘a, pea ko hoku uaifi ko e fefine fuoloa ‘aupito."
+    },
+    {
+      "verse": 19,
+      "text": "Pea tali ‘e he ‘āngelo ‘o ne pehē ki ai, Ko Kepaleli au, ‘a ia ‘oku ou fakafe‘ao ki he ‘Otua; pea kuo fekau au ke lea kiate koe, pea ke ‘atu ‘a e ongoongo lelei ni."
+    },
+    {
+      "verse": 20,
+      "text": "Pea ko eni, te ke noa, ‘o ‘ikai te ke fa‘a lea, ‘o a‘u ki he ‘aho ‘e hoko ai ‘a e me‘a ni: koe‘uhi na‘e ‘ikai te ke tui ki he‘eku ngaahi tala, ka ko e ngaahi lea ia ‘oku fai pau ‘oka hoko hono taimi."
+    },
+    {
+      "verse": 21,
+      "text": "Pea mo‘u talia pē ‘a e kakai kia Sākalaia, ‘o nau ofo ‘i he‘ene fuoloa ‘i he Fale Tapu."
+    },
+    {
+      "verse": 22,
+      "text": "Pea ‘i he‘ene hū mai, na‘e ‘ikai te ne lava ke lea kiate kinautolu: pea nau toki ‘ilo, tā kuo ne mamata ki ha vīsone ‘i he Fale Tapu; pea kakamo pē ia kiate kinautolu, ‘o ne nofo tuli mo ta‘elea."
+    },
+    {
+      "verse": 23,
+      "text": "Pea ‘i he faifai pea ‘osi ‘a e ngaahi ‘aho ‘o ‘ene fai ‘a e ngāue tapu, na‘a ne foki ki ‘api."
+    },
+    {
+      "verse": 24,
+      "text": "Pea hili ‘a e ngaahi ‘aho ko ia, na‘e tu‘itu‘ia ‘a ‘Ilisapesi ko hono uaifi, pea na‘a ne nofo ‘i he lilo ‘o nima māhina, he‘ene pehē,"
+    },
+    {
+      "verse": 25,
+      "text": "Koe‘uhiā kuo pehē fau ‘a e ngāue ‘a e ‘Eiki ma‘aku, ‘i he ‘iloange na‘a ne āfeitaulalo mai, ‘o hiki hoku mā‘anga ki he kakai."
+    },
+    {
+      "verse": 26,
+      "text": "Pea ‘i hono ono māhina, na‘e fekau mei he ‘Otua ‘a e ‘āngelo ko Kepaleli ki ha kolo ‘o Kāleli na‘e hingoa ko Nāsaleti,"
+    },
+    {
+      "verse": 27,
+      "text": "ke ne ‘alu ki ha tāupo‘ou na‘e polo‘i ki ha tangata ‘i he hako ‘o Tēvita, na‘e hingoa ko Siosifa; pea ko e hingoa ‘o e ta‘ahine ko Mele."
+    },
+    {
+      "verse": 28,
+      "text": "Pea ‘i he‘ene a‘u atu kiate ia na‘a ne pehē, Si‘oto‘ofa, ‘a koe kuo ‘ofeina: ‘oku ‘iate koe ‘a e ‘Eiki."
+    },
+    {
+      "verse": 29,
+      "text": "Pea mo‘utāfu‘ua ia ‘i he lea ni, ‘o ne fifili pe ‘e fou fakafēfē ‘a e fetapa ni."
+    },
+    {
+      "verse": 30,
+      "text": "Pea pehē ange ‘e he ‘āngelo, ‘e Mele, ‘oua te ke manavahē; he kuo ke ta‘imālie mei he ‘Otua."
+    },
+    {
+      "verse": 31,
+      "text": "Pea ko ‘eni, te ke tu‘itu‘ia, pea te ke ‘alo‘i ha tama, pea te ke fakahingoa ia ko Sīsū."
+    },
+    {
+      "verse": 32,
+      "text": "Pea ‘e hoko ko e lahi ‘a e toko taha ko ia; pea ‘e lau ia ko e ‘Alo ‘o e ‘Eiki Taupotu; pea ‘e foaki kiate ia ‘e he ‘Eiki ko e ‘Otua ‘a e taloni ‘o ‘ene kui ko Tēvita:"
+    },
+    {
+      "verse": 33,
+      "text": "pea te ne tu‘i ki he hako ‘o Sēkope ‘o lauikuonga; pea ko ‘ene pule ‘e ‘ikai ngata."
+    },
+    {
+      "verse": 34,
+      "text": "Pea pehē ‘e Mele ki he ‘āngelo, ‘e hoko fēfē ia? he ‘oku te‘eki te u ‘iloa ha tangata."
+    },
+    {
+      "verse": 35,
+      "text": "Pea tali ‘e he ‘āngelo kiate ia, ‘o pehē, ‘e hoko mai ‘a e Laumālie Mā‘oni‘oni kiate koe, pea ‘e fakamalumalu koe ‘e he māfimafi ‘o e ‘Eiki Taupotu: pea ko ia ‘e ui ai ‘a e hako tapu te ke fā‘ele‘i,"
+    },
+    {
+      "verse": 36,
+      "text": "KO E ‘ALO ‘O E ‘OTUA, pea vakai, ko ‘Ilisapesi ko ho kāinga, kuo tu‘itu‘ia mo ia ‘i ha tama, ka kuo motu‘a; pea ko hono ono māhina ‘eni ‘o ia na‘e lau ko e pa‘a:"
+    },
+    {
+      "verse": 37,
+      "text": "he ‘oku ‘ikai ha fo‘i folofola ‘a e ‘Otua ‘e ta‘emalava."
+    },
+    {
+      "verse": 38,
+      "text": "Pea pehē ‘e Mele, Ko au ‘eni, ko e kaunanga ‘a e ‘eiki: ke hoko mai kiate au ‘o hangē ko ho‘o me‘a. Pea ‘alu ‘a e ‘āngelo meiate ia."
+    },
+    {
+      "verse": 39,
+      "text": "Pea faifai pea tu‘u ‘a Mele, ‘o ‘alu fakavave ki he fonua mo‘unga, ki ha kolo ‘o Siutea;"
+    },
+    {
+      "verse": 40,
+      "text": "‘o ne hū ki he fale ‘o Sākalaia, ‘o fetapa kia ‘Ilisapesi."
+    },
+    {
+      "verse": 41,
+      "text": "Pea ‘iloange, ‘i he fanongo ‘e ‘Ilisapesi ki he fetapa ‘a Mele, ne hākahaka ‘a e tama ‘i hono fatu: pea fonu ‘a ‘Ilisapesi ‘i he Laumālie Mā‘oni‘oni,"
+    },
+    {
+      "verse": 42,
+      "text": "‘o ne kalanga le‘o lahi, Ha ‘ofeina ā ka ko koe ‘i he kau fefine kotoa pē! ‘Ofeina ā ka ko e fua ‘o ho manava!"
+    },
+    {
+      "verse": 43,
+      "text": "Pea ‘anefē ia ke me‘a mai kiate au ‘a e fa‘ē ‘a hoku ‘Eiki!"
+    },
+    {
+      "verse": 44,
+      "text": "He vakai, ‘i he ongo mai ho‘o fetapa ki hoku telinga, Pea hākailangitau ‘a e tama ‘i hoku manava."
+    },
+    {
+      "verse": 45,
+      "text": "Pea monū‘ia ā ka ko ia na‘e tuitala! Koe‘uhi ‘e fakamo‘oni ‘a e ngaahi me‘a Na‘e fakahā mei he ‘Eiki kiate ia."
+    },
+    {
+      "verse": 46,
+      "text": "Pea lea ‘a Mele ‘o pehē, ‘Oku fakahīkihiki‘i ‘e hoku loto ‘a e ‘Eiki."
+    },
+    {
+      "verse": 47,
+      "text": "Pea neka hoku laumālie ‘i he ‘Otua ko hoku Fakamo‘ui."
+    },
+    {
+      "verse": 48,
+      "text": "He kuo ne āfeitaulalo mai kia kita me‘avale ko ‘ene kaunanga: He faka‘uta mai, ko e ‘aho ni ‘e kamata Ke lau au ko e monū‘ia ‘e he ngaahi to‘utangata."
+    },
+    {
+      "verse": 49,
+      "text": "He kuo fai ma‘aku ‘e he Māfimafi ha ngaahi me‘a lalahi: Pea ‘oku mā‘oni‘oni hono huafa."
+    },
+    {
+      "verse": 50,
+      "text": "Pea ko ‘ene meesi ‘oku laui to‘utangata Kiate kinautolu ‘oku manavahē kiate ia."
+    },
+    {
+      "verse": 51,
+      "text": "Kuo fai kaukaua hono nima: Ko e ha‘a ‘afungi kuo ne fakavilingia ‘i he ngao‘i ‘o honau loto."
+    },
+    {
+      "verse": 52,
+      "text": "Kuo ne hifo ‘a e kau pule mei honau taloni, Pea ko lāuvale kuo ne hākeaki‘i."
+    },
+    {
+      "verse": 53,
+      "text": "Kuo ne ‘ange me‘a lelei ki he fiekaia ‘o nau mākona, Pea ko e ma‘u me‘a kuo ne tuku ke ‘alu mola."
+    },
+    {
+      "verse": 54,
+      "text": "Kuo ne taukapo‘i ‘a ‘Isileli, ko ‘ene sevāniti, Ke fakamanatu ma‘u ‘ene ngaahi meesi; Hangē ko ‘ene folofola ki he‘etau ngaahi kui:"
+    },
+    {
+      "verse": 55,
+      "text": "“‘E fai kia ‘Epalahame mo hono hako, ‘o ta‘engata.”"
+    },
+    {
+      "verse": 56,
+      "text": "Pea na‘e nofo mo ia ‘a Mele, ‘o fe‘unga nai mo e māhina ‘e tolu, pea na toki foki ki hono ‘api."
+    },
+    {
+      "verse": 57,
+      "text": "Pea ‘i he kakato ‘a e ngaahi māhina ‘o ‘Ilisapesi, na‘a ne fā‘ele‘i ha tama."
+    },
+    {
+      "verse": 58,
+      "text": "Pea fanongo ‘a e kakai ‘o e feitu‘u ko ia, mo hono kāinga, kuo fakae‘a ‘e he ‘Eiki ‘ene meesi ‘i he fefine ni; pea nau fiefia fakataha mo ia."
+    },
+    {
+      "verse": 59,
+      "text": "Pea ‘i he faifai pea hoko hono ‘aho valu, na‘a nau omi ke kamu ‘a e tamasi‘i; pea nau pehē ke fakahingoa ia ki he‘ene tamai ko Sākalaia."
+    },
+    {
+      "verse": 60,
+      "text": "Ka ka tali ‘e he‘ene fa‘ē, ‘o ne pehē, ‘Oua, Ka ‘e hingoa ko Sione."
+    },
+    {
+      "verse": 61,
+      "text": "Pea nau pehē kiate ia, Ka koe‘uhi ‘oku ‘ikai ha taha ‘i ho kāinga ‘oku hingoa pehē."
+    },
+    {
+      "verse": 62,
+      "text": "Pea nau kamata kamo ange ki he‘ene motu‘a, pe ‘oku ne loto ke fakahingoa ‘a e tama ko hai."
+    },
+    {
+      "verse": 63,
+      "text": "Pea me‘a ia ke ‘omi ha makatohi, ‘o ne tohi ai ‘o pehē, Ko hono hingoa ko Sione. Pea nau ofo ai kotoa pē."
+    },
+    {
+      "verse": 64,
+      "text": "Pea na‘e faka‘atā leva hono ngutu mo hono ‘elelo; ‘o ne kamata lea mo fakamālō ki he ‘Otua."
+    },
+    {
+      "verse": 65,
+      "text": "Pea, na‘e tō ha ilifia ki he kakai kotoa pē ‘o honau feitu‘u; pea ‘i he fonua mo‘unga kotoa ‘o Siutea na‘e lahi hono talanoa‘i ‘o e ngaahi me‘a ni."
+    },
+    {
+      "verse": 66,
+      "text": "Pea ko kinautolu kotoa pē na‘e fanongo ki ai, na‘a nau fakama‘u ‘i honau loto, he‘enau pehē, Tokaange ha me‘a ‘e hoko ki ai ‘a e tamasi‘i ni! Pea ne‘ine‘i ā, he na‘e kau mo ia ‘a e māfimafi ‘o e ‘Eiki."
+    },
+    {
+      "verse": 67,
+      "text": "Pea fonu ai ‘ene tamai ko Sākalaia ‘i he Laumālie Mā‘oni‘oni, pea ne palofisai ‘o pehē."
+    },
+    {
+      "verse": 68,
+      "text": "Ha taha ā ke fakamāloo‘i, Pea ko e ‘Eiki ko e ‘Otua ‘o ‘Isileli! He kuo ne ‘a‘ahi mai, mo fai ha huhu‘i ma‘a hono kakai."
+    },
+    {
+      "verse": 69,
+      "text": "Mo ne fokotu‘u he hako ‘o Tēvita, ko ‘ene tamaio‘eiki, Ha nifo mo‘otau fakahaofi."
+    },
+    {
+      "verse": 70,
+      "text": "‘O hangē ā ‘ene folofola ‘i he ngutu ‘o ‘ene kau palōfita tapu talu mei mu‘a:"
+    },
+    {
+      "verse": 71,
+      "text": "Ko e fakahaofi mei hotau ngaahi fili, Mo e mālohi ‘o e kakai ‘oku fehi‘a mai:"
+    },
+    {
+      "verse": 72,
+      "text": "Ke fakaai ‘ene ngaahi palōmesi na‘e ma‘u ‘e he‘etau ngaahi kui Mo tauhi ‘ene fuakava mā‘oni‘oni."
+    },
+    {
+      "verse": 73,
+      "text": "Mo e lea mamafa na‘a ne tutuku ‘aki kia ‘Epalahame ko ‘etau kui."
+    },
+    {
+      "verse": 74,
+      "text": "Ke ne me‘a‘ofa ‘aki mai ‘a e me‘a ko eni, Ke tau fai ta‘eteteki ‘etau ngāue ki he ‘Eiki, He kuo hamusi kitautolu mei hotau ngaahi fili."
+    },
+    {
+      "verse": 75,
+      "text": "‘O tau fakafeangai kiate ia ‘aki ‘a e mā‘oni‘oni mo e failelei ‘I he ngaahi ‘aho kotoa pē ‘o ‘etau mo‘ui."
+    },
+    {
+      "verse": 76,
+      "text": "Pea ko koe, tamasi‘i, ‘e lau ko e Palōfita ‘o e ‘Eiki Taupotu, He te ke fakamelomelo kiate ia ke teuteu hono ngaahi hala:"
+    },
+    {
+      "verse": 77,
+      "text": "Ke ‘atu ‘a e tala ‘o e fakamo‘ui ki he kakai ‘a‘ana, Ko e fakamolemole ‘enau ngaahi angahala:"
+    },
+    {
+      "verse": 78,
+      "text": "Ko e me‘a ‘i he ‘alo‘ofa ‘a hotau ‘Otua, ‘A ia ne ‘a‘ahi mei ai ‘a e pongipongi mei ‘olunga."
+    },
+    {
+      "verse": 79,
+      "text": "Ke hulu ‘aki he nofo he po‘uli mo e malu ‘o Mate, Mo tataki ki he hala ‘o e fiemālie hotau va‘e."
+    },
+    {
+      "verse": 80,
+      "text": "Pea na‘e tupu ‘a e tama, ‘o ne faka‘a‘au ke mālohi fakalaumālie; pea na‘a ne ‘i he ngaahi toafa ‘o a‘u ki he ‘aho na‘e fakahā ai ia ki ‘Isileli."
+    }
+  ],
+  "timestamp": "2025-08-08T15:57:08.550504"
+}

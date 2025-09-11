@@ -1,0 +1,36 @@
+{
+  "hymn_number": 500,
+  "title": "Himi 500",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Tamaiki tokolahi fau\n‘Oku nau ha’ofia\nTaloni ‘o e Tolu Tapu,\nKuo kofu hinehina:\n‘O nau hiva, hiva, hiva\nKi he Lami na’e pekia."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Naʻe fefe ‘enau lava atu\nKi loto hēvani,\nHe ‘ao tonu ‘o e Hau,\nHe monu’ia lahi?\n‘O nau hiva, etc."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Nau lava ko e ta’ata’a\n‘O Sīsū na’e pekia:\nKo e kofu na’a nau fō ke ma’a\nHe toto mahu’inga:\n‘O nau hiva, etc."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Nau nofo kia Sīsū heni\nKo ‘ene ki’i kau tau;\nNau feia ai ‘a e Tau Lelei\nHe tauhi ‘ene tapu:\n‘O nau hiva etc."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Ko ia ‘oku nau ‘i hē,\nHe loto kolōlia,\nKuo ma’u pale fulipē,\n‘O fonu fiefia:\n‘O nau hiva, etc."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Si! Tama, ‘oku ui mai\nKe tu’u ‘o ‘alu atu;\nFai hangē koē, ‘oku ai\nHa me’a pehe ma’au:\nKa ke hiva, hiva, hiva\nKi he Lami na’e pekia."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

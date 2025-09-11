@@ -1,0 +1,32 @@
+{
+  "hymn_number": 90,
+  "title": "Himi 90",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Ke mou fei mo ‘alu atu\nHe na’e pekia ia;\nKo e totongi totonu\n‘I he ngaahi angahia."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Pea ‘oku ‘ia Sīsū\nKe fakafiemālie\nKi he kakai ‘oku tui\nKe nau fa’a fakafeta’i."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Pea fakaakeake,\n‘A e tui ‘o e loto;\nPea fiefia lahi,\n‘I he ‘amanaki lelei."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Ke ke ngaohi kinautolu,\nHangē ko e ngaahi ‘akau;\nKuo tō ‘e he ‘Otua,\nPea fua angatonu."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Ke nau fakaongolelei,\n‘Ene ngāue anga’ofa;\nPea ke nau tupu hake\nPea ke nau haohaoa."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

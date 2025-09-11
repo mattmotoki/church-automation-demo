@@ -1,0 +1,32 @@
+{
+  "hymn_number": 60,
+  "title": "Himi 60",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Ke tau fai, pea teke’i\n‘Etau ta’e tui\nMo ‘etau mahalohalo\n‘Oku tupu hake."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Pea ke tau siofia\n‘A hotau Kēnani,\n‘A ia ‘oku tau ‘ofa’i\nPea tau ‘ilo’i."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Pea tau fa’a kaka hake\nKi he fu’u mo’unga,\nNe tu’u ‘i ai ‘a Mosese\n‘O mata fonua."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Ko e vai ko Soatani\nPea mo e mate,\n‘E ‘ikai si’i te ne mafai\nKe fa’a ta’ofia."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Ka ‘i he hā lahi mai\n‘A hotau fonua,\nTau ‘oho atu ki he vai\nPea tu’u ki ‘uta."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

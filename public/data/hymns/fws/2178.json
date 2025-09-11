@@ -1,0 +1,24 @@
+{
+  "hymn_number": 2178,
+  "title": "Here Am I",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Here am I,\nwhere underneath the bridges\nof our winter cities\nhomeless people sleep.\n<br>Here am I,\nwhere in decaying houses\nlittle children shiver,\ncrying at the cold.\n<br>Where are you?"
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Here am I,\nwith people in the line-up,\nanxious for a handout,\naching for a job.\n<br>Here am I,\nwhere pensioners and strikers\nsing and march together,\nwanting something new.\n<br>Where are you?"
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Here am I,\nwhere two or three are gathered,\nready to be altered,\nsharing wine and bread.\n<br>Here am I,\nwhere those who hear the preaching\nchange their way of living,\nfind the way to life.\n<br>Where are you?"
+    }
+  ],
+  "hymnal": "fws",
+  "author": "Brian Wren",
+  "composer": "Daniel Charles Damon",
+  "tune_name": "STANISLAUS",
+  "text_copyright": "© 1983 Hope Publishing Co.",
+  "tune_copyright": "© 1995 Hope Publishing Co."
+}

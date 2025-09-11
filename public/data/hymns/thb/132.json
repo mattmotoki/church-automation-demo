@@ -1,0 +1,36 @@
+{
+  "hymn_number": 132,
+  "title": "Himi 132",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Pea tuku atu\n‘Ene pule lelei\nKi māmani kotoa pē\nKe monū’ia ai."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Ko hono ikuna\n‘O hono kolosi;\n‘Oku ne folahi atu,\nKe tau vakai ki ai;"
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Vakai ki he fuka,\nPani ta’ata’a;\nKo hono faka’ilonga,\nKo ia ko e Hau;"
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea ‘i he ‘ao,\n‘O e Kapiteni;\nKe tau tau, ‘a e tau lelei\n‘O e tui, mo au."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Ke tau loto taha,\n‘O fai fakataha;\nPea tau hiki ki he tau,\n‘O hotau ‘Otua."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Ko e mahafu tau,\n‘Oku tau tali’aki,\nKo e loto ta’engaue,\nNa’e ‘ia Sīsū."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

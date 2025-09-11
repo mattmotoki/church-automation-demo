@@ -1,0 +1,36 @@
+{
+  "hymn_number": 34,
+  "title": "Himi 34",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Ko e huafa ‘o Sīsū\n‘Oku ma’olunga,\nKi he kakai kotoa pē\nPea fai ma’u ai pē."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "’I he maama ‘i ‘olunga\n‘Oku lahi ia,\nPea lahi hono ‘aonga\nKi he kakai hia."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Pea manavahē foki\n‘A e kau tēvolo\n‘I he huafa ‘o Sīsū\nPea nau puna ai."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Ka ‘oku fiemālie\n‘I hono huafa\n‘A e kakai angahala\nKuo loto liliu."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "‘Oku ne motumotuhi\nHonau ngaahi ha’i.\nMo ne fakamālohi’i\n‘A e loto vaivai."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Pea fakaakeake,\n‘A e kakai mate;\nPea nau fiemālie\n‘I he’ene ‘ofa."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

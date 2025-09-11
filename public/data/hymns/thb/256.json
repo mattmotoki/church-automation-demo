@@ -1,0 +1,36 @@
+{
+  "hymn_number": 256,
+  "title": "Himi 256",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "’Oku fakahā totonu\n‘E he Tohi Tapu\n‘A e ngaahi ngāue mana,\n‘A hotau ‘Otua."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "He na’a ne fakatupu,\n‘I he kamata’anga;\n‘A e langi, mo māmani,\nPea tu’u ma’u pē."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Pea na’e lelei lahi,\n‘A e kelekele;\nMo e me’a kotoa pē,\nNa’e fakatupu."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea toki fakatupu,\n‘E hotau ‘Otua,\n‘A e sino ‘o ‘Atama,\n‘I he kelekele."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Ka ko hono laumālie\nKo e me’a kehe;\nHe ko e mānava ia,\n‘O hotau ‘Otua."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Pea hoko ‘o mo’ui\nHotau tupu’anga;\nPea na’e hoko lelei,\nKi hotau ‘Otua."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

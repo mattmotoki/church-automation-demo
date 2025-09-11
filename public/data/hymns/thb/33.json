@@ -1,0 +1,28 @@
+{
+  "hymn_number": 33,
+  "title": "Himi 33",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Na’e totongi ‘e Sīsū\n‘A e mo’ua lahi,\n‘O e kakai ‘o māmani\nKi He’ene Tamai."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Pea ko e totongi ko ia\n‘I he angahala,\nKo e mate ‘angaua\n‘I he afi vela."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Ka na’e pekia ia\n‘I he’ene ‘ofa\nKo hotau fetongi ia\nKi hotau ‘Otua."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Ke mou tui kia Sīsū\nPea ‘amanaki\nKi he fakamolemole\n‘O e ngaahi hia."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

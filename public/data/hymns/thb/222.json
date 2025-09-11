@@ -1,0 +1,40 @@
+{
+  "hymn_number": 222,
+  "title": "Himi 222",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Sīsū ko e kau tonu,\n‘A e Afiona,\n‘Oku mau ‘unu atu ni\nKi homau ‘Otua."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Ke ke tu’u ‘i homau ‘ao\n‘I he teunga ‘o’ou;\nKo e teunge pani toto,\nKo e toto ‘o’ou."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "’Oku mau tofi a e mā\nHangē ko ho fekau;\nKo ‘emau fakamanatu;\nKi he ‘Afiona."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Mo ho pekia mamahi\n‘I he’emau hia’\nPea ke mau fafanga ai\nHomau laumālie."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Ko eni, Sīsū fakahā,\nPea ke mau ‘ilo;\n‘A ho anga, anga’ofa,\n‘I ho Laumālie."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Pea ke ne tata’o fo’ou\nHomau laumālie,\nPea ke mau hoko tonu,\nKo e kakai ‘o’ou."
+    },
+    {
+      "page_name": "Verse 7",
+      "text": "Ko hono faka’ilonga,\n‘O ho’o ‘ofa lahi,\nKe mau hokosi fulipē\n‘I he loto tui."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

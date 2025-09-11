@@ -1,0 +1,28 @@
+{
+  "hymn_number": 307,
+  "title": "Himi 307",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Pea ka tau ka mo’ua\n‘I he ngaahi ‘ahi’ahi,\nKe tau lotu kumi,\nKe kau ‘e he Laumālie,\nKe tokoni, ‘etau vaivai,\nKe tau fa’a kātaki."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Pea ke tau kole ma’u pē,\nKi he tokoni ‘i loto,\n‘A e Laumālie;\nPea ke tau fa’a vakai,\nPea lotu, fai ma’u ai pē,\nKe tau mo’ui ai."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Pea ke tau fa’a tokanga,\nKi he ngaahi akonaki,\n’I he Tohi Tapu,\nHe ko e heletā ia,\n‘A e Laumālie lelei,\nKe tau puke ia."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea ke tau ‘alu ma’u pē\nPea muimui atu\nKi he Laumālie,\nPea te tau lava atu\nKi he iku’anga lelei,\nPea mālie ai."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

@@ -1,0 +1,40 @@
+{
+  "hymn_number": 120,
+  "title": "Himi 120",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Ha’u ‘akimoutolu, ‘oku\nTui kia Sīsū;\nKe tau fakaongo atu,\n‘Ene angalelei."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Ko hotau Fakamo’ui.\n‘A ‘ene ‘Afio;\nKe tau hiva fiefia,\n‘I he’ene ‘ofa."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "‘Oku kei tatali ia,\nPea Tukituki;\nKi he loto kotoa pē,\n‘O e angakovi."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "‘Oua na’a teke’i ia,\n‘E he angakovi;\nKae tō ‘a e matapā\nKi he ‘Eiki lelei."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "’Oku mau fiefia fai,\nPea ‘amanaki;\nTe ke hū ki loto, ‘Eiki,\nKe mau mo’ui ai."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Ko e ‘Eiki mei langi,\n‘A e ‘Afiona;\nKe ke hā’ele vave mai,\nKe tau nonofo ma’u."
+    },
+    {
+      "page_name": "Verse 7",
+      "text": "Pea ke tau ‘ohomohe,\n‘E ‘Eiki, mo koe,\n‘I he katoanga, ko e\n‘Ofa ta’engata."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

@@ -1,0 +1,32 @@
+{
+  "hymn_number": 223,
+  "title": "Himi 223",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Pea mau ongo’i foki,\n‘A e Laumālie,\nFakaakeake loto\nPea ke mau tui."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Ko e mā, ‘oku mau kai ni,\nTe mau ui ia\nKo hono faka’ilonga,\n‘O e sino ‘o’ou."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Pea moe uaine foki,\n’Oku mau inu ai;\nKo hono faka’ilonga,\n‘O ho ta’ata’a."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea ke mau lava’i ai,\nHono fakaake;\n‘O e mo’ui mo’oni,\nFakalaumālie."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Pea ke mau kai mo’oni,\n‘A e mana fufū,\nKe hoko ‘o mākona ai,\n‘A e fiekaia."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

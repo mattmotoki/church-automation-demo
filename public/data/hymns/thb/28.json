@@ -1,0 +1,32 @@
+{
+  "hymn_number": 28,
+  "title": "Himi 28",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "’Eiki ‘oku mau holi\nKe mau ‘iate koe,\nPea ke mau ongo’i\n‘A ho’o ngāue lelei."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Pea mau hoko ‘o ma’u\nHono faka’ilonga\n‘O ‘emau liliu loto\nMo ‘emau tupu fo’ou."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "‘Oku mau mafasia\n‘I he maama mamahi,\nPea mau ngāueue\n‘I he kavenga kovi."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "‘Oku mau manavahē\n‘I he’emau ongo’i\nKo e kau houhau ia\nMo e tu’utāmaki."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "‘Eiki ‘Alo’ofa mai\nKi he kau loto vaivai,\nMo ke fakahaofi\n‘A homau laumālie."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

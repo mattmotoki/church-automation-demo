@@ -1,0 +1,121 @@
+[
+  {
+    "name": "Base Template",
+    "items": [
+      {
+        "item_name": "Prelude",
+        "item_aliases": ["prelude", "opening music"],
+        "stand_indicator": false,
+        "default_person": "Jason Eom"
+      },
+      {
+        "item_name": "Welcome",
+        "item_aliases": ["welcome", "greeting", "words of welcome"],
+        "stand_indicator": false,
+        "default_person": ""
+      },
+      {
+        "item_name": "Blowing of the Shell",
+        "item_aliases": ["blowing of the shell", "pu", "kele'a"],
+        "stand_indicator": false,
+        "default_person": "Helena Ogle"
+      },
+      {
+        "item_name": "Call to Worship",
+        "item_aliases": ["call to worship", "call", "opening responsive"],
+        "stand_indicator": true,
+        "default_person": ""
+      },
+      {
+        "item_name": "Opening Hymn",
+        "item_aliases": ["opening hymn", "hymn", "first hymn", "processional hymn"],
+        "stand_indicator": true,
+        "default_person": "Tupou Seini Kelemeni"
+      },
+      {
+        "item_name": "Opening Prayer",
+        "item_aliases": ["opening prayer", "prayer", "invocation", "prayer of invocation"],
+        "stand_indicator": false,
+        "default_person": ""
+      },
+      {
+        "item_name": "Gloria Patri",
+        "item_aliases": ["gloria patri", "gloria", "glory be"],
+        "stand_indicator": true,
+        "default_person": "Tupou Seini Kelemeni"
+      },
+      {
+        "item_name": "Message for All Generations",
+        "item_aliases": ["children's message", "message for all generations", "children's time", "time with children"],
+        "stand_indicator": false,
+        "default_person": ""
+      },
+      {
+        "item_name": "Scripture Reading",
+        "item_aliases": ["scripture", "scripture reading", "first reading", "second reading", "gospel reading"],
+        "stand_indicator": false,
+        "default_person": ""
+      },
+      {
+        "item_name": "Hymn",
+        "item_aliases": ["hymn", "second hymn", "hymn of preparation"],
+        "stand_indicator": false,
+        "default_person": "Tupou Seini Kelemeni"
+      },
+      {
+        "item_name": "Sermon",
+        "item_aliases": ["message", "sermon", "homily", "reflection"],
+        "stand_indicator": false,
+        "default_person": ""
+      },
+      {
+        "item_name": "Sharing of Joys and Concerns",
+        "item_aliases": ["prayers of the people", "joys and concerns", "sharing of joys and concerns", "community prayer"],
+        "stand_indicator": false,
+        "default_person": ""
+      },
+      {
+        "item_name": "Lord's Prayer",
+        "item_aliases": ["lord's prayer", "our father", "the lord's prayer"],
+        "stand_indicator": false,
+        "default_person": ""
+      },
+      {
+        "item_name": "Offertory",
+        "item_aliases": ["offering", "offertory", "tithes and offerings"],
+        "stand_indicator": false,
+        "default_person": "Jason Eom"
+      },
+      {
+        "item_name": "Doxology",
+        "item_aliases": ["doxology", "praise god"],
+        "stand_indicator": true,
+        "default_person": "Tupou Seini Kelemeni"
+      },
+      {
+        "item_name": "Prayer of Dedication",
+        "item_aliases": ["prayer of dedication", "offering prayer", "offertory prayer"],
+        "stand_indicator": true,
+        "default_person": ""
+      },
+      {
+        "item_name": "Closing Hymn",
+        "item_aliases": ["closing hymn", "final hymn", "recessional hymn", "hymn of sending"],
+        "stand_indicator": true,
+        "default_person": "Tupou Seini Kelemeni"
+      },
+      {
+        "item_name": "Benediction",
+        "item_aliases": ["benediction", "blessing", "sending forth", "dismissal"],
+        "stand_indicator": true,
+        "default_person": ""
+      },
+      {
+        "item_name": "Postlude",
+        "item_aliases": ["postlude", "closing music"],
+        "stand_indicator": true,
+        "default_person": "Jason Eom"
+      }
+    ]
+  }
+]

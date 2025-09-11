@@ -1,0 +1,36 @@
+{
+  "hymn_number": 300,
+  "title": "Himi 300",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "‘Eiki ko kimautolu ni,\nKo ho kakai angahia;\n‘Oku mau fakataha ni,\nKe hū ki he ‘Afiona."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Ko e kakai angahala,\nPea mo e tu’utāmaki,\nKi he mate ‘angaua,\n‘I he’emau angakovi."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Ka ke manatu’i,’Eiki\nKia Sīsū, ko ho Alo;\nMo ‘ene pekia kovi,\nKo homau fetongi ia."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea fakamolemole,\n‘Emau kovi kotoa pē,\nKo e me’a ‘ia Ssū,\nKo homau Fakalaloa."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Ke mau fiemālie ai\n‘I he’emau ma’u ‘i loto,\n‘A e ‘ofa kuo lingi,\n‘E ho Laumālie Lelei."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Ke tupu ai ‘emau ‘ofa,\n‘Eiki, ki he ‘Afiona,\nKe hoko ai ‘emau ‘ofa,\nKi he kakai kotoa pē."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

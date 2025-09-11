@@ -1,0 +1,22 @@
+# Ignore frontend
+node_modules
+.next
+src
+public
+components
+pages
+styles
+
+# Ignore git
+.git
+.gitignore
+
+# Ignore env files
+.env*
+
+# Ignore docs
+README.md
+docs
+
+# But keep railway-api
+!railway-api/

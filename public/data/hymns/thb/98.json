@@ -1,0 +1,32 @@
+{
+  "hymn_number": 98,
+  "title": "Himi 98",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "’Eiki Laumālie lelei,\nKuo u fakahouhau’ia\n‘Oua na’a ke li’aki,\n‘A e angakovi ko au."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Ko e mo’oni ‘aupito,\n‘Oku lahi ‘eku hia;\nMo ‘eku fa’a fu’ifu’i,\n‘A e ngāue lelei ‘a ‘au."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Lahi ‘eku angatu’u\n‘Eiki, ki he ‘Afiona;\nKo e fai kovi lahi au,\n‘I he kakai kotoa pē."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Ka koe’uhi, ko Sīsū;\nKo hoku fakalaloa,\n‘I ho nima to’omata’u:\nKe ke fakamo’ui au."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Ko hoku hūfanga ia,\n‘I he’eku angahia;\n‘Eiki fakamolemole,\n‘Eku kovi kotoa pē."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

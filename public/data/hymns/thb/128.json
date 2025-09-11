@@ -1,0 +1,32 @@
+{
+  "hymn_number": 128,
+  "title": "Himi 128",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Ko e tui kia Sīsū\nKo e ngāue ia;\n‘A ia kuo fokotu’u,\nMa’a e tangata."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Pea ‘oku ‘ia Sīsū\nHono fakamafai;\nPea ngāue ‘i loto,\n‘E he Laumālie."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Pea ‘oku ne tokoni,\nKi he loto vaivai;\nPea hoko ai ‘o tui,\nPea mo’ui ai."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Pea tonuhia leva,\n‘I he’ene tui;\n‘O ne ma’u ‘a e melino.\nMo hono ‘Otua."
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "Pea hao ‘o mo’ui,\nHono laumālie\nPea fiemālie ai\n‘I he’ene tui."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

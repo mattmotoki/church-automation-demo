@@ -1,0 +1,36 @@
+{
+  "hymn_number": 54,
+  "title": "Himi 54",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Ko eni ke mou fa’a fai\nPea tokonaki,\nHomou potu ke hū ki ai\nPea ungaki’i."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "’I tu’a ‘i he fa’itoka\nPea mama’o atu,\nMei he mālohi ‘o heli,\nKe tau malu ai."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Ke hao ‘a e laumālie\nMei he faka’auha,\nPea ke tau siofia\n‘A e ngata’anga."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "He vakai, ko e fu’u Maka\nTu’u ta’engata,\nKuo fahi ua ia\nKia kitautolu,"
+    },
+    {
+      "page_name": "Verse 5",
+      "text": "‘Oku tau hoko ‘o ‘ilo\n‘I he’etau tui,\n‘A e potu ‘i ‘olunga\n‘O e maka lahi."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "‘I he malu ‘o e ‘ofa\n‘O ‘ene pekia,\nPea tau nofo ma’u ai pē\nKe tau malu ‘ia."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

@@ -1,0 +1,28 @@
+{
+  "hymn_number": 12,
+  "title": "Himi 12",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "‘A e kāinga mou tokanga mai\nKe tau fie fai ‘a e ngāue ni\nKo e feilaulau mo fakafeta’i\nKi hotau ‘Otua ‘oku ‘ofa mai."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Kuo tau hoko ko ‘ene kakai\nTau fiefia mo fakafeta’i,\nKi he ‘Otua ko ’etau Tamai\nKe tau fiefia ‘o fai ma’u ai pē."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Ko hotau ‘Eiki na’a ne kumi\nHotau fa’ahinga ‘i he’etau tō\nNe ‘ikai mamae ki hono ‘Alo\nKa na’e tuku mai ko hotau hifo."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Ke tau tokanga ki hotau ‘Eiki\nKo e hūfanga, tau unga ki ai,\nPea tau tui, ‘e malu ia\nHotau Laumālie pea fai ma’u ai pē."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}

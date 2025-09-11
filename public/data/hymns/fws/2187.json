@@ -1,0 +1,44 @@
+{
+  "hymn_number": 2187,
+  "title": "Now It Is Evening",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Now it is evening: Lights of the city\nBid us remember Christ is our Light.\nMany are lonely, Who will be neighbor?\nWhere there is caring Christ is our Light."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Now it is evening: Food on the table\nBids us remember Christ is our Life.\nMany are hungry, Who will be neighbor?\nWhere there is sharing Christ is our Life."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Now it is evening: Little ones sleeping\nBid us remember Christ is our Peace.\nSome are neglected, Who will be neighbor?\nWhere there is caring Christ is our Peace."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Now it is evening: Here in our meeting\nMay we remember Christ is our Friend.\nSome may be strangers, Who will be neighbor?\nWhere there's a welcome Christ is our Friend."
+    },
+    {
+      "page_name": "Spanish Verse 1",
+      "text": "Ya se oscurece: luces del pueblo\ntraen el recuerdo, Cristo es la Luz.\nHay muchos solos, ¿quién es hermano?\nDonde hay amparo, Cristo es la Luz."
+    },
+    {
+      "page_name": "Spanish Verse 2",
+      "text": "Ya se oscurece: mesas servidas\ntraen el recuerdo, Cristo es Vivir.\nMuchos con hambre, ¿quién es hermana?\nSi compartimos, Cristo es Vivir."
+    },
+    {
+      "page_name": "Spanish Verse 3",
+      "text": "Ya se oscurece: niños dormidos\ntraen el recuerdo, Cristo es la Paz.\nGente olvidada, ¿quién es hermana?\nCuando hay cariño, Cristo es la Paz."
+    },
+    {
+      "page_name": "Spanish Verse 4",
+      "text": "Ya se oscurece: y al reunirnos,\nno olvidemos Cristo es Amor.\nMuchos extraños, ¿quién es hermano?\nCuando acogemos, Cristo es Amor."
+    }
+  ],
+  "hymnal": "fws",
+  "author": "Fred Pratt Green",
+  "composer": "David Haas",
+  "tune_name": "EVENING HYMN",
+  "text_copyright": "© 1974 Hope Publishing Co.",
+  "tune_copyright": "© 1985 GIA Publicaitons, Inc."
+}

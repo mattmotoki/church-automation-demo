@@ -1,0 +1,28 @@
+{
+  "hymn_number": 2048,
+  "title": "God Weeps",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "God weeps at love withheld,\nat strength misused,\nat children's innocence abused,\nand till we change the way we love, God weeps."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "God bleeds at anger's fist,\nat trust betrayed,\nat women battered and afraid,\nand till we change the way we win, God bleeds."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "God cries at hungry mouths,\nat running sores,\nat creatures dying without cause,\nand till we change the way we care, God cries."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "God waits for stones to melt,\nfor peace to seed,\nfor hearts to hold each other's need,\nand till we understand the Christ, God waits."
+    }
+  ],
+  "hymnal": "fws",
+  "author": "Shirley Erena Murray",
+  "composer": "Carlton R. Young",
+  "tune_name": "HIROSHIMA",
+  "text_copyright": "© 1996 Hope Publishing Co.",
+  "tune_copyright": "©1996 Hope Publishing Co."
+}

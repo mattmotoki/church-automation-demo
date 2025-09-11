@@ -1,0 +1,32 @@
+{
+  "hymn_number": 74,
+  "title": "Himi 74",
+  "hymnal": "thb",
+  "lyrics": [
+    {
+      "page_name": "Verse 1",
+      "text": "Ko e Folofola\n‘A hotau ‘Otua\nKo e mo’oni pe ia\nPea ta’e hala."
+    },
+    {
+      "page_name": "Verse 2",
+      "text": "Pea na’e tupu\n‘A e Folofola\n‘I he Laumālie lelei\n‘O hotau ‘Otua."
+    },
+    {
+      "page_name": "Verse 3",
+      "text": "Pea na’e tohi\n‘A e Folofola\n‘E he kau tangata poto\n‘O hotau ‘Otua."
+    },
+    {
+      "page_name": "Verse 4",
+      "text": "Ko e maama lahi\n‘A e Folofola\nPea ‘oku ulo ma’u pē\nPea ta’e mate.\n5. Ko e makatu’u\n‘A e Folofola,\n‘Oku tu’u ma’u ai pē ia\nPea ta’engata."
+    },
+    {
+      "page_name": "Verse 6",
+      "text": "Ko e fakama’unga\n‘A e Folofola,\n‘I he mea fakalotu,\nMo e me’a maama."
+    }
+  ],
+  "author": "",
+  "composer": "",
+  "tune_name": "",
+  "text_copyright": "",
+  "tune_copyright": ""
+}
