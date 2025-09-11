@@ -1,678 +1,726 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import FileUploader from '@/components/FileUploader';
-import SettingsButton from '@/components/SettingsButton';
-import BulletinEditor from '@/components/BulletinEditor';
-import BackgroundPicker from '@/components/BackgroundPicker';
-import { ServiceRoles } from '@/types/bulletin';
+import { useState, useEffect, useMemo } from 'react';
+import Image from 'next/image';
+import CallToWorshipTab from '@/components/slides/CallToWorshipTab';
 
-interface BackgroundData {
-  id: string;
-  display_name: string;
-  path: string;
-  type: string;
+interface Hymn {
+  number: string;
+  title: string;
+  has_text: boolean;
+  text_url: string;
+  lyrics: string;
+  parsed_lyrics: string;
+  author?: string;
+  composer?: string;
+  tune_name?: string;
+  text_copyright?: string;
+  tune_copyright?: string;
 }
 
-interface SlideData {
-  callToWorship: {
-    text: string;
-    reference?: string;
-  } | null;
-  hymns: {
-    title: string;
-    number: string;
-    hymnal: 'UMH' | 'FWS';
-  }[];
-  scripture: {
-    reference: string;
-    text: string;
-    version?: string;
-  } | null;
-  lead_pastor?: string;
-}
-
-interface DisplayData {
-  Text: string;
-  Name: string;
-  Description: string;
-  Personnel: string;
-  Standing: boolean;
-  wasMatched: boolean;
+// Helper function to get Tongan book names
+function getTonganBookName(bookCode: string): string | null {
+  const tonganNames: Record<string, string> = {
+    'GEN': 'Kenesi', 'EXO': 'ʻEkisotosi', 'LEV': 'Levitiko', 'NUM': 'Nemipia', 'DEU': 'Teutelonomi',
+    'JOS': 'Siosiua', 'JDG': 'Fakamaau', 'RUT': 'Lute', '1SA': '1 Samueli', '2SA': '2 Samueli',
+    '1KI': '1 Tuʻi', '2KI': '2 Tuʻi', '1CH': '1 Kalonikali', '2CH': '2 Kalonikali',
+    'EZR': 'ʻEsila', 'NEH': 'Nehimaia', 'EST': 'ʻEseta', 'JOB': 'Siope', 'PSA': 'Saame',
+    'PRO': 'Lea Fakatatauki', 'ECC': 'ʻEkilisiasitesi', 'SNG': 'Hiva ʻa Solomone', 'ISA': 'ʻAisea',
+    'JER': 'Selemaia', 'LAM': 'Tangilāulau', 'EZK': 'ʻIsikieli', 'DAN': 'Taniela',
+    'HOS': 'Hosea', 'JOL': 'Soeli', 'AMO': 'ʻAmosi', 'OBA': 'ʻOpataia', 'JON': 'Siona',
+    'MIC': 'Maika', 'NAM': 'Nahumi', 'HAB': 'Hapakuki', 'ZEP': 'Sefanaia', 'HAG': 'Hakai',
+    'ZEC': 'Sekalaia', 'MAL': 'Malaki',
+    'MAT': 'Matiu', 'MRK': 'Maʻake', 'LUK': 'Luke', 'JHN': 'Sione', 'ACT': 'Ngaue',
+    'ROM': 'Loma', '1CO': '1 Kolinito', '2CO': '2 Kolinito', 'GAL': 'Kalātia',
+    'EPH': 'ʻEfeso', 'PHP': 'Filipai', 'COL': 'Kolosi', '1TH': '1 Tesalonaika',
+    '2TH': '2 Tesalonaika', '1TI': '1 Timote', '2TI': '2 Timote', 'TIT': 'Taitosi',
+    'PHM': 'Filimona', 'HEB': 'Hepelū', 'JAS': 'Semisi', '1PE': '1 Pita', '2PE': '2 Pita',
+    '1JN': '1 Sione', '2JN': '2 Sione', '3JN': '3 Sione', 'JUD': 'Siuta', 'REV': 'Fakahā'
+  };
+  return tonganNames[bookCode] || null;
 }
 
 export default function Home() {
-  const [data, setData] = useState<DisplayData[] | null>(null);
-  const [editedData, setEditedData] = useState<DisplayData[] | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [filename, setFilename] = useState<string | null>(null);
-  const [serviceRoles, setServiceRoles] = useState<ServiceRoles>({});
-  const [slideData, setSlideData] = useState<SlideData | null>(null);
+  const [activeTab, setActiveTab] = useState<'call-to-worship' | 'hymn' | 'scripture'>('call-to-worship');
   
-  // Background picker state
-  const [baseBackground, setBaseBackground] = useState<BackgroundData | null>(null);
-  const [baseBackgroundFile, setBaseBackgroundFile] = useState<File | null>(null);
-  const [hymn1Background, setHymn1Background] = useState<BackgroundData | null>(null);
-  const [hymn1BackgroundFile, setHymn1BackgroundFile] = useState<File | null>(null);
-  const [hymn2Background, setHymn2Background] = useState<BackgroundData | null>(null);
-  const [hymn2BackgroundFile, setHymn2BackgroundFile] = useState<File | null>(null);
-  const [hymn3Background, setHymn3Background] = useState<BackgroundData | null>(null);
-  const [hymn3BackgroundFile, setHymn3BackgroundFile] = useState<File | null>(null);
+  // Background state for hymns and scripture tabs
+  const [backgroundImage, setBackgroundImage] = useState<File | null>(null);
+  const [selectedBackground, setSelectedBackground] = useState<any>(null);
+  const [showBackgroundSelector, setShowBackgroundSelector] = useState(false);
+  const [availableBackgrounds, setAvailableBackgrounds] = useState<any[]>([]);
   
-  // Slide generation state
-  const [isGeneratingSlides, setIsGeneratingSlides] = useState(false);
-  const [slideGenerationError, setSlideGenerationError] = useState<string | null>(null);
-  const [slideGenerationSuccess, setSlideGenerationSuccess] = useState<string | null>(null);
+  // Scripture state
+  const [scriptureVersion, setScriptureVersion] = useState<'nrsvue' | 'tmb' | 'combined'>('nrsvue');
+  const [scriptureBook, setScriptureBook] = useState<string>('PSA');
+  const [availableBooks, setAvailableBooks] = useState<{ code: string; name: string }[]>([]);
+  const [scriptureChapter, setScriptureChapter] = useState<number>(23);
+  const [scriptureStartVerse, setScriptureStartVerse] = useState<number>(1);
+  const [scriptureEndVerse, setScriptureEndVerse] = useState<number>(6);
+  const [isGeneratingScripture, setIsGeneratingScripture] = useState(false);
+  const [scriptureError, setScriptureError] = useState<string | null>(null);
+  const [scriptureSuccess, setScriptureSuccess] = useState<string | null>(null);
+  const [availableChapters, setAvailableChapters] = useState<number[]>([]);
+  const [availableVerses, setAvailableVerses] = useState<number[]>([]);
+  const [selectedHymnal, setSelectedHymnal] = useState<'UMH' | 'FWS' | 'THB'>('UMH');
+  const [selectedHymn, setSelectedHymn] = useState<Hymn | null>(null);
+  const [hymns, setHymns] = useState<Hymn[]>([]);
+  const [hymnError, setHymnError] = useState<string | null>(null);
+  const [hymnSuccess, setHymnSuccess] = useState<string | null>(null);
+  const [isGeneratingHymn, setIsGeneratingHymn] = useState(false);
 
+  // Helper function to convert image path to base64
+  const fetchImageAsBase64 = async (imagePath: string): Promise<string> => {
+    const response = await fetch(imagePath);
+    const blob = await response.blob();
+    return new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result as string);
+      reader.readAsDataURL(blob);
+    });
+  };
 
-  const handleFileUpload = async (file: File) => {
-    setIsLoading(true);
-    setError(null);
+  // Function to open background selector
+  const openBackgroundSelector = () => {
+    setShowBackgroundSelector(true);
+  };
 
-    try {
-      console.log('Starting file upload:', file.name);
-      const formData = new FormData();
-      formData.append('htmlFile', file);
-      
-      // Load and send templates and personnel data
-      try {
-        const [templatesRes, personnelRes] = await Promise.all([
-          fetch('/data/templates.json'),
-          fetch('/data/personnel.json')
-        ]);
-        
-        if (templatesRes.ok) {
-          const templates = await templatesRes.json();
-          formData.append('templates', JSON.stringify(templates));
-        }
-        
-        if (personnelRes.ok) {
-          const personnel = await personnelRes.json();
-          formData.append('personnel', JSON.stringify(personnel));
-        }
-      } catch (e) {
-        console.warn('Could not load templates/personnel data:', e);
-      }
-
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
-      console.log('Calling API at:', `${apiUrl}/api/parse-html`);
-      
-      const response = await fetch(`${apiUrl}/api/parse-html`, {
-        method: 'POST',
-        body: formData,
-      });
-
-      console.log('Response status:', response.status);
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const result = await response.json();
-      console.log('Parse result:', result);
-
-      if (result.success) {
-        setData(result.data);
-        setEditedData(result.data);
-        setFilename(result.filename);
-        setSlideData(result.slideData || null);
-        // Update service roles if they were detected during parsing
-        if (result.serviceRoles) {
-          setServiceRoles(result.serviceRoles);
-        }
-      } else {
-        setError(result.error || 'Failed to parse HTML file');
-      }
-    } catch (err) {
-      console.error('Upload error details:', err);
-      
-      if (err instanceof TypeError && err.message.includes('Failed to fetch')) {
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
-        setError(`Cannot connect to API server at ${apiUrl}. Please check if the API is running.`);
-      } else if (err instanceof Error) {
-        setError(`Error processing file: ${err.message}`);
-      } else {
-        setError('Error processing file. Please try again.');
-      }
-    } finally {
-      setIsLoading(false);
+  // Create object URL for uploaded image
+  const uploadedImageUrl = useMemo(() => {
+    if (backgroundImage) {
+      return URL.createObjectURL(backgroundImage);
     }
-  };
+    return null;
+  }, [backgroundImage]);
 
-  const handleDataChange = (updatedData: DisplayData[]) => {
-    setEditedData(updatedData);
-  };
+  // Clean up object URL
+  useEffect(() => {
+    return () => {
+      if (uploadedImageUrl) {
+        URL.revokeObjectURL(uploadedImageUrl);
+      }
+    };
+  }, [uploadedImageUrl]);
 
-  const handleServiceRolesChange = (updatedRoles: ServiceRoles) => {
-    setServiceRoles(updatedRoles);
-  };
+  // Load available backgrounds
+  useEffect(() => {
+    const loadBackgrounds = async () => {
+      try {
+        const response = await fetch('/data/backgrounds.json');
+        if (response.ok) {
+          const data = await response.json();
+          setAvailableBackgrounds(data);
+        }
+      } catch (err) {
+        console.error('Error loading backgrounds:', err);
+      }
+    };
+    loadBackgrounds();
+  }, []);
 
-  const generateAll = async () => {
-    if (!slideData) {
-      setSlideGenerationError('No slide data available. Please upload a Planning Center HTML file first.');
+  // Load hymns data from individual files
+  useEffect(() => {
+    const loadHymns = async () => {
+      try {
+        const folderName = selectedHymnal === 'UMH' ? 'umh' : selectedHymnal === 'FWS' ? 'fws' : 'thb';
+        
+        // Get list of all hymn files from API
+        const indexResponse = await fetch(`/api/list-hymns?hymnal=${folderName}`);
+        if (!indexResponse.ok) {
+          throw new Error('Failed to load hymn index');
+        }
+        const hymnList: string[] = await indexResponse.json();
+        
+        // Load each hymn's data
+        const hymnPromises = hymnList.map(async (filename: string) => {
+          const number = filename.replace('.json', '');
+          try {
+            const response = await fetch(`/data/hymns/${folderName}/${filename}`);
+            if (response.ok) {
+              const data = await response.json();
+              return {
+                number: data.hymn_number || number,
+                title: data.title,
+                has_text: !!data.lyrics,
+                text_url: '',
+                lyrics: data.lyrics,  // Keep original format
+                parsed_lyrics: data.lyrics,  // Keep original format
+                author: data.author || '',
+                composer: data.composer || '',
+                tune_name: data.tune_name || '',
+                text_copyright: data.text_copyright || '',
+                tune_copyright: data.tune_copyright || ''
+              };
+            }
+            return null;
+          } catch {
+            return null;
+          }
+        });
+        
+        const hymnDataArray = await Promise.all(hymnPromises);
+        const validHymns = hymnDataArray.filter(h => h !== null);
+        setHymns(validHymns);
+      } catch (err) {
+        console.error('Error loading hymns:', err);
+        setHymnError('Failed to load hymn data');
+      }
+    };
+    
+    loadHymns();
+  }, [selectedHymnal]);
+
+  // Load available scripture books for selected version
+  useEffect(() => {
+    const loadBooks = async () => {
+      try {
+        if (scriptureVersion === 'combined') {
+          // For combined mode, fetch NRSVUE books and add Tongan names
+          const res = await fetch(`/api/list-books?version=nrsvue`);
+          if (!res.ok) return;
+          const nrsvueBooks = await res.json();
+          
+          // Add Tongan names in parentheses for combined mode
+          const combinedBooks = nrsvueBooks.map((book: any) => {
+            const tonganName = getTonganBookName(book.code);
+            return {
+              code: book.code,
+              name: tonganName ? `${book.name} (${tonganName})` : book.name
+            };
+          });
+          
+          setAvailableBooks(combinedBooks);
+          if (combinedBooks?.length && !combinedBooks.find((b: any) => b.code === scriptureBook)) {
+            setScriptureBook(combinedBooks[0].code);
+          }
+        } else {
+          // Single version mode
+          const res = await fetch(`/api/list-books?version=${scriptureVersion}`);
+          if (!res.ok) return;
+          const data = await res.json();
+          setAvailableBooks(data);
+          if (data?.length && !data.find((b: any) => b.code === scriptureBook)) {
+            setScriptureBook(data[0].code);
+          }
+        }
+      } catch {}
+    };
+    loadBooks();
+  }, [scriptureVersion, scriptureBook]);
+
+  // Load chapters when book or version changes
+  useEffect(() => {
+    const loadChapters = async () => {
+      try {
+        if (!scriptureBook) return;
+        // For combined mode, use nrsvue as the base
+        const versionToUse = scriptureVersion === 'combined' ? 'nrsvue' : scriptureVersion;
+        const res = await fetch(`/api/list-chapters?version=${versionToUse}&book=${scriptureBook}`);
+        if (!res.ok) return;
+        const chapters: number[] = await res.json();
+        setAvailableChapters(chapters);
+        if (chapters.length) {
+          if (!chapters.includes(scriptureChapter)) {
+            setScriptureChapter(chapters[0]);
+          }
+        }
+      } catch {}
+    };
+    loadChapters();
+  }, [scriptureVersion, scriptureBook, scriptureChapter]);
+
+  // Load verses when chapter/book/version changes
+  useEffect(() => {
+    const loadVerses = async () => {
+      try {
+        if (!scriptureBook || !scriptureChapter) return;
+        // For combined mode, use nrsvue as the base
+        const versionToUse = scriptureVersion === 'combined' ? 'nrsvue' : scriptureVersion;
+        const res = await fetch(`/api/list-verses?version=${versionToUse}&book=${scriptureBook}&chapter=${scriptureChapter}`);
+        if (!res.ok) return;
+        const verses: number[] = await res.json();
+        setAvailableVerses(verses);
+        if (verses.length) {
+          if (!verses.includes(scriptureStartVerse)) setScriptureStartVerse(verses[0]);
+          if (!verses.includes(scriptureEndVerse)) setScriptureEndVerse(verses[verses.length - 1]);
+        }
+      } catch {}
+    };
+    loadVerses();
+  }, [scriptureVersion, scriptureBook, scriptureChapter, scriptureStartVerse, scriptureEndVerse]);
+
+  const generateHymnSlides = async () => {
+    if (!selectedHymn) {
+      setHymnError('Please select a hymn first.');
       return;
     }
 
-    setIsGeneratingSlides(true);
-    setSlideGenerationError(null);
-    setSlideGenerationSuccess(null);
+    if (!selectedHymn.has_text || (!selectedHymn.parsed_lyrics && !selectedHymn.lyrics)) {
+      setHymnError('This hymn does not have lyrics available for slide generation.');
+      return;
+    }
+
+    setIsGeneratingHymn(true);
+    setHymnError(null);
+    setHymnSuccess(null);
 
     try {
-      // Helper function to get background for API call
-      const getBackgroundForAPI = async (backgroundData: BackgroundData | null, backgroundFile: File | null) => {
-        if (backgroundFile) {
-          return await new Promise<string>((resolve) => {
-            const reader = new FileReader();
-            reader.onload = () => resolve(reader.result as string);
-            reader.readAsDataURL(backgroundFile);
-          });
-        } else if (backgroundData) {
-          // Convert selected background to base64
-          const response = await fetch(backgroundData.path);
-          const blob = await response.blob();
-          return await new Promise<string>((resolve) => {
-            const reader = new FileReader();
-            reader.onload = () => resolve(reader.result as string);
-            reader.readAsDataURL(blob);
-          });
+      let requestBody: any = {
+        hymn: {
+          number: selectedHymn.number,
+          title: selectedHymn.title,
+          hymnal: selectedHymnal,
+          lyrics: selectedHymn.parsed_lyrics || selectedHymn.lyrics,
+          author: selectedHymn.author || '',
+          composer: selectedHymn.composer || '',
+          tune_name: selectedHymn.tune_name || '',
+          text_copyright: selectedHymn.text_copyright || '',
+          tune_copyright: selectedHymn.tune_copyright || ''
         }
-        return null;
       };
 
-      // Prepare data for combined slides endpoint
-      const requestBody: any = {};
-      
-      // Add lead pastor if available
-      if (slideData.lead_pastor) {
-        requestBody.lead_pastor = slideData.lead_pastor;
+      // Add background image if provided
+      if (backgroundImage) {
+        const base64Image = await new Promise<string>((resolve) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result as string);
+          reader.readAsDataURL(backgroundImage);
+        });
+        requestBody.background_image = base64Image;
+      } else if (selectedBackground) {
+        // Convert selected background to base64
+        const base64Image = await fetchImageAsBase64(selectedBackground.path);
+        requestBody.background_image = base64Image;
+      } else {
+        // Use default ocean-sunrise background
+        const base64Image = await fetchImageAsBase64('/images/ocean-sunrise-golden-worship-background.jpg');
+        requestBody.background_image = base64Image;
       }
-      
-      // Add base background
-      const baseBackgroundData = await getBackgroundForAPI(baseBackground, baseBackgroundFile);
-      if (baseBackgroundData) {
-        requestBody.base_background = baseBackgroundData;
-      }
-      
-      // Add hymn backgrounds
-      const hymnBackgrounds = [
-        { bg: hymn1Background, file: hymn1BackgroundFile },
-        { bg: hymn2Background, file: hymn2BackgroundFile },
-        { bg: hymn3Background, file: hymn3BackgroundFile }
-      ];
-      
-      for (let i = 0; i < 3; i++) {
-        const { bg, file } = hymnBackgrounds[i];
-        const background = await getBackgroundForAPI(bg, file);
-        if (background) {
-          requestBody[`hymn${i + 1}_background`] = background;
-        }
-      }
-      
-      // Add Call to Worship data
-      if (slideData.callToWorship && slideData.callToWorship.text) {
-        const lines = slideData.callToWorship.text.trim().split('\n');
-        const pairs = [];
-        
-        for (let i = 0; i < lines.length; i += 2) {
-          const leader = lines[i]?.trim() || '';
-          const people = lines[i + 1]?.trim() || '';
-          if (leader) {
-            pairs.push({ Leader: leader, People: people });
-          }
-        }
-        
-        if (pairs.length > 0) {
-          requestBody.call_to_worship_pairs = pairs;
-        }
-      }
-      
-      // Add Hymn data
-      const hymnsData = [];
-      for (let i = 0; i < Math.min(slideData.hymns.length, 3); i++) {
-        const hymn = slideData.hymns[i];
-        
-        try {
-          // Load hymn data from JSON
-          const folderName = hymn.hymnal.toLowerCase();
-          const hymnPath = `/data/hymns/${folderName}/${hymn.number}.json`;
-          console.log(`Fetching hymn data from: ${hymnPath}`);
-          const hymnResponse = await fetch(hymnPath);
-          
-          if (hymnResponse.ok) {
-            const hymnData = await hymnResponse.json();
-            
-            if (hymnData.lyrics) {
-              hymnsData.push({
-                hymn: {
-                  number: hymn.number,
-                  title: hymn.title,
-                  hymnal: hymn.hymnal,
-                  lyrics: hymnData.lyrics,
-                  author: hymnData.author || '',
-                  composer: hymnData.composer || '',
-                  tune_name: hymnData.tune_name || '',
-                  text_copyright: hymnData.text_copyright || '',
-                  tune_copyright: hymnData.tune_copyright || ''
-                }
-              });
-            }
-          } else {
-            console.warn(`Hymn file not found: ${hymnPath} (status: ${hymnResponse.status})`);
-            // Add placeholder data for missing hymn
-            hymnsData.push({
-              hymn: {
-                number: hymn.number,
-                title: hymn.title || `Hymn ${hymn.number}`,
-                hymnal: hymn.hymnal
-              },
-              lyrics: []
-            });
-          }
-        } catch (err) {
-          console.error(`Error loading hymn ${i + 1} data:`, err);
-        }
-      }
-      requestBody.hymns = hymnsData;
-      
-      // Add Scripture data
-      if (slideData.scripture && slideData.scripture.reference) {
-        console.log('Scripture data from parser:', slideData.scripture);
-        try {
-          // Parse scripture reference for API
-          const refMatch = slideData.scripture.reference.match(/([A-Za-z]+)\s+(\d+):(\d+)\s*-\s*(\d+)/);
-          console.log('Scripture reference match:', refMatch);
-          if (refMatch) {
-            const [, bookName, chapter, startVerse, endVerse] = refMatch;
-            
-            // Map book name to abbreviation (e.g., "Acts" -> "ACT")
-            const bookMap: { [key: string]: string } = {
-              'Acts': 'ACT',
-              'Genesis': 'GEN',
-              'Exodus': 'EXO',
-              'Psalms': 'PS',
-              'Psalm': 'PS',
-              'Matthew': 'MT',
-              'Mark': 'MK',
-              'Luke': 'LK',
-              'John': 'JN',
-              // Add more mappings as needed
-            };
-            
-            const book = bookMap[bookName] || bookName.toUpperCase().substring(0, 3);
-            const version = (slideData.scripture.version || 'nrsvue').toLowerCase();
-            
-            // Fetch the verses from the JSON file
-            const response = await fetch(`/data/bibles/${version}/${book}_chapter_${chapter}.json`);
-            if (response.ok) {
-              const chapterData = await response.json();
-              const verses = [];
-              
-              // Extract verses in the range
-              const start = parseInt(startVerse);
-              const end = parseInt(endVerse);
-              
-              for (const verse of chapterData.verses || []) {
-                if (verse.verse >= start && verse.verse <= end) {
-                  verses.push({
-                    verse: verse.verse,
-                    text: verse.text
-                  });
-                }
-              }
-              
-              if (verses.length > 0) {
-                requestBody.scripture = {
-                  reference: { book, chapter: parseInt(chapter) },
-                  verses
-                };
-                console.log('Scripture added to requestBody:', requestBody.scripture);
-              }
-            } else {
-              console.error('Failed to fetch scripture data');
-            }
-          }
-        } catch (err) {
-          console.error('Error fetching scripture:', err);
-        }
-      }
-      
-      // Generate combined slides
-      console.log('Combined slides requestBody:', requestBody);
-      console.log('Scripture in request:', requestBody.scripture);
+
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
-      const response = await fetch(`${apiUrl}/api/generate-combined-slides`, {
+      const response = await fetch(`${apiUrl}/api/generate-hymn-slides`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(requestBody)
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody),
       });
-      
+
       if (response.ok) {
         const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
-        
-        // Download the combined slides
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'complete_service_slides.pptx';
+        a.download = `${selectedHymnal}_${selectedHymn.number}_${selectedHymn.title.replace(/[^a-zA-Z0-9]/g, '_')}_slides.pptx`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
         
-        // Clean up URL after a delay
-        setTimeout(() => {
-          window.URL.revokeObjectURL(url);
-        }, 10000);
-        
-        // Generate individual slide sets
-        const individualSlides = [];
-        
-        // 1. Call to Worship slides
-        if (requestBody.call_to_worship_pairs && requestBody.call_to_worship_pairs.length > 0) {
-          try {
-            const ctwResponse = await fetch(`${apiUrl}/api/generate-call-to-worship`, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                pairs: requestBody.call_to_worship_pairs,
-                background_image: requestBody.base_background
-              })
-            });
-            if (ctwResponse.ok) {
-              const blob = await ctwResponse.blob();
-              individualSlides.push({ name: 'call_to_worship.pptx', blob });
-            }
-          } catch (err) {
-            console.error('Error generating Call to Worship slides:', err);
-          }
-        }
-        
-        // 2. Scripture slides
-        if (requestBody.scripture) {
-          try {
-            const scriptureResponse = await fetch(`${apiUrl}/api/generate-scripture-slides`, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                reference: requestBody.scripture.reference,
-                verses: requestBody.scripture.verses,
-                background_image: requestBody.base_background
-              })
-            });
-            if (scriptureResponse.ok) {
-              const blob = await scriptureResponse.blob();
-              individualSlides.push({ name: 'scripture.pptx', blob });
-            }
-          } catch (err) {
-            console.error('Error generating Scripture slides:', err);
-          }
-        }
-        
-        // 3. Hymn slides (up to 3)
-        for (let i = 0; i < requestBody.hymns.length && i < 3; i++) {
-          const hymn = requestBody.hymns[i];
-          if (hymn && hymn.hymn) {
-            try {
-              const hymnResponse = await fetch(`${apiUrl}/api/generate-hymn-slides`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  hymn: hymn.hymn,
-                  background_image: requestBody[`hymn${i + 1}_background`]
-                })
-              });
-              if (hymnResponse.ok) {
-                const blob = await hymnResponse.blob();
-                const hymnName = hymn.hymn.title ? 
-                  `hymn_${hymn.hymn.number}_${hymn.hymn.title.replace(/[^a-zA-Z0-9]/g, '_')}.pptx` :
-                  `hymn_${i + 1}.pptx`;
-                individualSlides.push({ name: hymnName, blob });
-              }
-            } catch (err) {
-              console.error(`Error generating Hymn ${i + 1} slides:`, err);
-            }
-          }
-        }
-        
-        // Download all individual slides
-        for (const slide of individualSlides) {
-          const url = window.URL.createObjectURL(slide.blob);
-          const a = document.createElement('a');
-          a.href = url;
-          a.download = slide.name;
-          document.body.appendChild(a);
-          a.click();
-          document.body.removeChild(a);
-          setTimeout(() => window.URL.revokeObjectURL(url), 10000);
-        }
-        
-        // Also generate DOCX bulletin
-        if (editedData && editedData.length > 0) {
-          try {
-            const bulletinResponse = await fetch(`${apiUrl}/api/generate-bulletin`, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                data: editedData,
-                filename: filename?.replace('.html', '.docx') || 'bulletin.docx'
-              })
-            });
-
-            if (bulletinResponse.ok) {
-              const bulletinBlob = await bulletinResponse.blob();
-              const bulletinUrl = window.URL.createObjectURL(bulletinBlob);
-              
-              // Download bulletin
-              setTimeout(() => {
-                const a = document.createElement('a');
-                a.href = bulletinUrl;
-                a.download = filename?.replace('.html', '.docx') || 'bulletin.docx';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-              }, 500); // Slight delay after slides
-              
-              // Clean up URL after a delay
-              setTimeout(() => {
-                window.URL.revokeObjectURL(bulletinUrl);
-              }, 10000);
-              
-              setSlideGenerationSuccess('Successfully generated complete service slides and bulletin!');
-            } else {
-              setSlideGenerationSuccess('Successfully generated complete service slides!');
-            }
-          } catch (err) {
-            console.error('Error generating bulletin:', err);
-            setSlideGenerationSuccess('Successfully generated complete service slides!');
-          }
-        } else {
-          setSlideGenerationSuccess('Successfully generated complete service slides!');
-        }
+        setHymnSuccess(`Successfully generated hymn slides for "${selectedHymn.title}"!`);
       } else {
-        console.error('Combined slides generation failed:', response.status, response.statusText);
         const errorData = await response.json();
-        console.error('Error details:', errorData);
-        setSlideGenerationError(errorData.detail || 'Failed to generate combined slides');
+        setHymnError(errorData.error || 'Failed to generate hymn slides');
       }
-
     } catch (err) {
-      setSlideGenerationError('An error occurred while generating slides');
-      console.error('Slide generation error:', err);
+      setHymnError('An error occurred while generating hymn slides');
+      console.error('Generate hymn slides error:', err);
     } finally {
-      setIsGeneratingSlides(false);
+      setIsGeneratingHymn(false);
     }
   };
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-6xl mx-auto px-4">
-        <header className="text-center mb-8 relative">
-          {/* Settings button in top right */}
-          <div className="absolute top-0 right-0">
-            <SettingsButton />
+        <header className="mb-8">
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">
+                Church Slide Generator
+              </h1>
+            </div>
           </div>
-          
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Church Material Automation
-          </h1>
-          <p className="text-gray-600">
-            Upload your Planning Center HTML export to create a service bulletin
-          </p>
         </header>
 
-        <div className="space-y-8">
-          {/* File Upload Section */}
-          <section>
-            <FileUploader onFileUpload={handleFileUpload} isLoading={isLoading} />
+        {/* Tab Navigation */}
+        <div className="mb-8">
+          <div className="border-b border-gray-200">
+            <nav className="-mb-px flex space-x-8">
+              <button
+                onClick={() => setActiveTab('call-to-worship')}
+                className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                  activeTab === 'call-to-worship' 
+                    ? 'border-blue-500 text-blue-600' 
+                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                }`}
+              >
+                Call to Worship
+              </button>
+              <button
+                onClick={() => setActiveTab('hymn')}
+                className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                  activeTab === 'hymn' 
+                    ? 'border-blue-500 text-blue-600' 
+                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                }`}
+              >
+                Hymns
+              </button>
+              <button
+                onClick={() => setActiveTab('scripture')}
+                className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                  activeTab === 'scripture' 
+                    ? 'border-blue-500 text-blue-600' 
+                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                }`}
+              >
+                Scriptures
+              </button>
+            </nav>
+          </div>
+        </div>
+
+        {activeTab === 'call-to-worship' && <CallToWorshipTab />}
+
+        {activeTab === 'hymn' && (
+        <>
+        <div className="bg-white rounded-lg shadow-sm border p-6">
+          <h2 className="text-xl font-semibold mb-4">Hymns</h2>
+          <div className="space-y-4">
             
-            {error && (
-              <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-md">
-                <p className="text-red-800">{error}</p>
+            {/* Hymnal Selection */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Hymnal
+              </label>
+              <div className="flex space-x-4">
+                <label className="flex items-center">
+                  <input
+                    type="radio"
+                    value="UMH"
+                    checked={selectedHymnal === 'UMH'}
+                    onChange={(e) => {
+                      setSelectedHymnal(e.target.value as 'UMH' | 'FWS' | 'THB');
+                      setSelectedHymn(null);
+                    }}
+                    className="mr-2"
+                  />
+                  The United Methodist Hymnal (UMH)
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="radio"
+                    value="FWS"
+                    checked={selectedHymnal === 'FWS'}
+                    onChange={(e) => {
+                      setSelectedHymnal(e.target.value as 'UMH' | 'FWS' | 'THB');
+                      setSelectedHymn(null);
+                    }}
+                    className="mr-2"
+                  />
+                  The Faith We Sing (FWS)
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="radio"
+                    value="THB"
+                    checked={selectedHymnal === 'THB'}
+                    onChange={(e) => {
+                      setSelectedHymnal(e.target.value as 'UMH' | 'FWS' | 'THB');
+                      setSelectedHymn(null);
+                    }}
+                    className="mr-2"
+                  />
+                  Tongan Hymn Book (THB)
+                </label>
+              </div>
+            </div>
+
+            {/* Hymn Selection */}
+            <div>
+              <label htmlFor="hymn-select" className="block text-sm font-medium text-gray-700 mb-2">
+                Select Hymn
+              </label>
+              <select
+                id="hymn-select"
+                value={hymns.findIndex(h => h === selectedHymn)}
+                onChange={(e) => {
+                  const index = parseInt(e.target.value);
+                  if (index >= 0 && index < hymns.length) {
+                    setSelectedHymn(hymns[index]);
+                  } else {
+                    setSelectedHymn(null);
+                  }
+                }}
+                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              >
+                <option value="-1">-- Select a hymn --</option>
+                {hymns.map((hymn, index) => (
+                  <option key={`${selectedHymnal}-${index}`} value={index}>
+                    {hymn.number} - {hymn.title} {hymn.has_text ? '✓' : '(no lyrics)'}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Selected Hymn Info */}
+            {selectedHymn && (
+              <div className="p-4 bg-blue-50 border border-blue-200 rounded-md">
+                <h3 className="font-semibold text-blue-900">
+                  {selectedHymnal} {selectedHymn.number}: {selectedHymn.title}
+                </h3>
+                <p className="text-sm text-blue-700 mt-1">
+                  {selectedHymn.has_text ? (
+                    <span className="text-green-600">✓ Lyrics available for slide generation</span>
+                  ) : (
+                    <span className="text-red-600">✗ No lyrics available for this hymn</span>
+                  )}
+                </p>
               </div>
             )}
-          </section>
 
-          {/* Bulletin Editor Section */}
-          {data && (
-            <section>
-              <BulletinEditor 
-                data={data} 
-                onDataChange={handleDataChange}
-                filename={filename || undefined}
-              />
-            </section>
-          )}
-
-          {/* Background Picker Section - Always visible */}
-          {true && (
-            <section>
-              <div className="bg-white rounded-lg shadow-sm border p-6">
-                <h2 className="text-xl font-semibold mb-4">Slide Generation Settings</h2>
-                <p className="text-gray-600 mb-6 text-sm">
-                  Choose background images for automatic slide generation. Upload a Planning Center HTML file to enable slide generation.
-                </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <BackgroundPicker
-                    label="Base Background (Call to Worship + Scripture)"
-                    selectedBackground={baseBackground}
-                    selectedFile={baseBackgroundFile}
-                    onBackgroundSelect={setBaseBackground}
-                    onFileSelect={setBaseBackgroundFile}
-                  />
-                  
-                  <BackgroundPicker
-                    label="Hymn 1 Background"
-                    selectedBackground={hymn1Background}
-                    selectedFile={hymn1BackgroundFile}
-                    onBackgroundSelect={setHymn1Background}
-                    onFileSelect={setHymn1BackgroundFile}
-                  />
-                  
-                  <BackgroundPicker
-                    label="Hymn 2 Background"
-                    selectedBackground={hymn2Background}
-                    selectedFile={hymn2BackgroundFile}
-                    onBackgroundSelect={setHymn2Background}
-                    onFileSelect={setHymn2BackgroundFile}
-                  />
-                  
-                  <BackgroundPicker
-                    label="Hymn 3 Background"
-                    selectedBackground={hymn3Background}
-                    selectedFile={hymn3BackgroundFile}
-                    onBackgroundSelect={setHymn3Background}
-                    onFileSelect={setHymn3BackgroundFile}
-                  />
-                </div>
-                
-                {/* No file uploaded message */}
-                {!slideData && (
-                  <div className="mt-4 p-3 bg-gray-50 border border-gray-200 rounded-md">
-                    <div className="flex items-center">
-                      <svg className="w-4 h-4 mr-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                      </svg>
-                      <p className="text-sm text-gray-600">
-                        Upload a Planning Center HTML file to detect slide content and enable generation
-                      </p>
-                    </div>
-                  </div>
+            {/* Generate PowerPoint Button */}
+            <div className="mt-6">
+              <button
+                onClick={generateHymnSlides}
+                disabled={isGeneratingHymn || !selectedHymn || !selectedHymn.has_text}
+                className="w-full px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2 text-base font-medium"
+              >
+                {isGeneratingHymn ? (
+                  <>
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Generating...
+                  </>
+                ) : (
+                  <>
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Generate Hymn Slides
+                  </>
                 )}
-                
-                {/* Slide Generation Summary */}
-                {slideData && (
-                  <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-md">
-                    <h4 className="text-sm font-semibold text-yellow-900 mb-2">Detected Slide Content:</h4>
-                    <ul className="text-sm text-yellow-800 space-y-1">
-                      {slideData.callToWorship && (
-                        <li>✓ Call to Worship{slideData.callToWorship.reference ? ` (${slideData.callToWorship.reference})` : ''}</li>
-                      )}
-                      {slideData.hymns.map((hymn, idx) => (
-                        <li key={idx}>✓ Hymn {idx + 1}: &quot;{hymn.title}&quot; {hymn.hymnal} {hymn.number}</li>
-                      ))}
-                      {slideData.scripture && (
-                        <li>✓ Scripture: {slideData.scripture.reference} ({slideData.scripture.version})</li>
-                      )}
-                    </ul>
-                  </div>
-                )}
-                
-                {/* Generate All Button - Slides and Bulletin */}
-                <div className="mt-6">
-                  <button
-                    onClick={generateAll}
-                    disabled={isGeneratingSlides || !slideData}
-                    className={`w-full px-6 py-3 text-white rounded-md transition-colors flex items-center justify-center gap-2 text-base font-medium ${
-                      !slideData 
-                        ? 'bg-gray-400 cursor-not-allowed' 
-                        : isGeneratingSlides
-                        ? 'bg-purple-500 cursor-wait'
-                        : 'bg-purple-600 hover:bg-purple-700'
-                    }`}
-                    title={!slideData ? "Please upload a Planning Center HTML file first" : "Generate all slides and bulletin"}
-                  >
-                    {isGeneratingSlides ? (
-                      <>
-                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                        Generating Content...
-                      </>
-                    ) : (
-                      <>
-                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        Generate Content
-                        {slideData && (
-                          <span className="text-sm opacity-90 ml-1">
-                            (Bulletin + Combined Slides)
-                          </span>
-                        )}
-                      </>
-                    )}
-                  </button>
-                </div>
-                
-                {slideGenerationError && (
-                  <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">
-                    <p className="text-red-800 text-sm">{slideGenerationError}</p>
-                  </div>
-                )}
-
-                {slideGenerationSuccess && (
-                  <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-md">
-                    <p className="text-green-800 text-sm">{slideGenerationSuccess}</p>
-                  </div>
-                )}
+              </button>
+            </div>
+            
+            {hymnError && (
+              <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">
+                <p className="text-red-800 text-sm">{hymnError}</p>
               </div>
-            </section>
-          )}
+            )}
 
-
+            {hymnSuccess && (
+              <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-md">
+                <p className="text-green-800 text-sm">{hymnSuccess}</p>
+              </div>
+            )}
+          </div>
         </div>
+        </>
+        )}
+
+        {activeTab === 'scripture' && (
+        <>
+        <div className="bg-white rounded-lg shadow-sm border p-6">
+          <h2 className="text-xl font-semibold mb-4">Scriptures</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Version</label>
+              <select
+                value={scriptureVersion}
+                onChange={(e) => setScriptureVersion(e.target.value as 'nrsvue' | 'tmb' | 'combined')}
+                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              >
+                <option value="nrsvue">NRSVUE</option>
+                <option value="tmb">TMB</option>
+                <option value="combined">Combined (NRSVUE + TMB)</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Book</label>
+              <select
+                value={scriptureBook}
+                onChange={(e) => setScriptureBook(e.target.value)}
+                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              >
+                {availableBooks.map((b) => (
+                  <option key={b.code} value={b.code}>{b.name}</option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Chapter</label>
+              <select
+                value={scriptureChapter}
+                onChange={(e) => setScriptureChapter(parseInt(e.target.value, 10))}
+                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              >
+                {availableChapters.map((ch) => (
+                  <option key={ch} value={ch}>{ch}</option>
+                ))}
+              </select>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Start Verse</label>
+                <select
+                  value={scriptureStartVerse}
+                  onChange={(e) => setScriptureStartVerse(parseInt(e.target.value, 10))}
+                  className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                >
+                  {availableVerses.map((v) => (
+                    <option key={v} value={v}>{v}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">End Verse</label>
+                <select
+                  value={scriptureEndVerse}
+                  onChange={(e) => setScriptureEndVerse(parseInt(e.target.value, 10))}
+                  className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                >
+                  {availableVerses.map((v) => (
+                    <option key={v} value={v}>{v}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+
+          {/* Generate PowerPoint Button */}
+          <div className="mt-6">
+            <button
+              onClick={async () => {
+                setIsGeneratingScripture(true);
+                setScriptureError(null);
+                setScriptureSuccess(null);
+                try {
+                  let verses: any[] = [];
+                  let verses_alt: any[] | undefined = undefined;
+
+                  if (scriptureVersion === 'combined') {
+                    // Fetch both NRSVUE and TMB for combined mode
+                    const nrsvuePath = `/data/bibles/nrsvue/${scriptureBook}_chapter_${scriptureChapter}.json`;
+                    const tmbPath = `/data/bibles/tmb/${scriptureBook}_chapter_${scriptureChapter}.json`;
+                    
+                    const [nrsvueRes, tmbRes] = await Promise.all([
+                      fetch(nrsvuePath),
+                      fetch(tmbPath)
+                    ]);
+                    
+                    if (!nrsvueRes.ok || !tmbRes.ok) throw new Error('Chapter not found');
+                    
+                    const [nrsvueChapter, tmbChapter] = await Promise.all([
+                      nrsvueRes.json(),
+                      tmbRes.json()
+                    ]);
+                    
+                    verses = (nrsvueChapter.verses || [])
+                      .filter((v: any) => typeof v.verse === 'number' && v.verse >= scriptureStartVerse && v.verse <= scriptureEndVerse)
+                      .map((v: any) => ({ verse: v.verse, text: v.text }));
+                    
+                    verses_alt = (tmbChapter.verses || [])
+                      .filter((v: any) => typeof v.verse === 'number' && v.verse >= scriptureStartVerse && v.verse <= scriptureEndVerse)
+                      .map((v: any) => ({ verse: v.verse, text: v.text }));
+                    
+                    if (!verses.length && !verses_alt?.length) throw new Error('No verses in range');
+                  } else {
+                    // Single translation mode
+                    const chapterPath = `/data/bibles/${scriptureVersion}/${scriptureBook}_chapter_${scriptureChapter}.json`;
+                    const res = await fetch(chapterPath);
+                    if (!res.ok) throw new Error('Chapter not found');
+                    const chapter = await res.json();
+                    verses = (chapter.verses || [])
+                      .filter((v: any) => typeof v.verse === 'number' && v.verse >= scriptureStartVerse && v.verse <= scriptureEndVerse)
+                      .map((v: any) => ({ verse: v.verse, text: v.text }));
+                    if (!verses.length) throw new Error('No verses in range');
+                  }
+
+                  const body: any = { reference: { book: scriptureBook, chapter: scriptureChapter }, verses };
+                  if (verses_alt) {
+                    body.verses_alt = verses_alt;
+                  }
+                  if (backgroundImage) {
+                    const base64Image = await new Promise<string>((resolve) => {
+                      const reader = new FileReader();
+                      reader.onload = () => resolve(reader.result as string);
+                      reader.readAsDataURL(backgroundImage);
+                    });
+                    body.background_image = base64Image;
+                  } else {
+                    // Use default ocean-sunrise background
+                    const base64Image = await fetchImageAsBase64('/images/ocean-sunrise-golden-worship-background.jpg');
+                    body.background_image = base64Image;
+                  }
+
+                  const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+                  const resp = await fetch(`${apiUrl}/api/generate-scripture-slides`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body)
+                  });
+                  if (!resp.ok) {
+                    try {
+                      const err = await resp.json();
+                      throw new Error(err.error || 'Failed to generate scripture slides');
+                    } catch {
+                      throw new Error('Failed to generate scripture slides');
+                    }
+                  }
+                  const blob = await resp.blob();
+                  const url = window.URL.createObjectURL(blob);
+                  const a = document.createElement('a');
+                  a.href = url;
+                  a.download = `${scriptureBook}_${scriptureChapter}_${scriptureStartVerse}-${scriptureEndVerse}_slides.pptx`;
+                  document.body.appendChild(a);
+                  a.click();
+                  document.body.removeChild(a);
+                  window.URL.revokeObjectURL(url);
+                  setScriptureSuccess('Successfully generated scripture slides!');
+                } catch (e: any) {
+                  setScriptureError(e?.message || 'Failed to generate scripture slides');
+                } finally {
+                  setIsGeneratingScripture(false);
+                }
+              }}
+              disabled={isGeneratingScripture}
+              className="w-full px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2 text-base font-medium"
+            >
+              {isGeneratingScripture ? (
+                <>
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Generating...
+                </>
+              ) : (
+                <>
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  Generate Scripture Slides
+                </>
+              )}
+            </button>
+          </div>
+
+          {scriptureError && (
+            <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">
+              <p className="text-red-800 text-sm">{scriptureError}</p>
+            </div>
+          )}
+          {scriptureSuccess && (
+            <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-md">
+              <p className="text-green-800 text-sm">{scriptureSuccess}</p>
+            </div>
+          )}
+        </div>
+        </>
+        )}
       </div>
     </div>
   );
