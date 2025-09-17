@@ -6,12 +6,6 @@
     "type": "General"
   },
   {
-    "id": "brown-gradient",
-    "display_name": "Brown Gradient Abstract",
-    "path": "/images/brown-gradient-abstract-worship-background.jpg",
-    "type": "General"
-  },
-  {
     "id": "colorful-bokeh",
     "display_name": "Colorful Bokeh Lights",
     "path": "/images/colorful-bokeh-lights-worship-background.jpg",
@@ -58,17 +52,5 @@
     "display_name": "Resurrection Empty Cross",
     "path": "/images/resurrection-empty-cross-sunrise-worship-background.jpg",
     "type": "Easter"
-  },
-  {
-    "id": "warm-orange",
-    "display_name": "Warm Orange Gradient",
-    "path": "/images/warm-orange-gradient-worship-background.jpg",
-    "type": "General"
-  },
-  {
-    "id": "wheat-harvest",
-    "display_name": "Wheat Harvest Sunset",
-    "path": "/images/wheat-harvest-sunset-worship-background.jpg",
-    "type": "Thanksgiving"
   }
 ]
