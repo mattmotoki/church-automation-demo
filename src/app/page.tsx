@@ -479,6 +479,32 @@ export default function Home() {
               </div>
             )}
 
+            {/* Generate PowerPoint Button */}
+            <div className="mt-6">
+              <button
+                onClick={generateHymnSlides}
+                disabled={isGeneratingHymn || !selectedHymn || !selectedHymn.has_text}
+                className="w-full px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2 text-base font-medium"
+              >
+                {isGeneratingHymn ? (
+                  <>
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Generating...
+                  </>
+                ) : (
+                  <>
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Generate Hymn Slides
+                  </>
+                )}
+              </button>
+            </div>
+
             {/* Background Image Section */}
             <div className="mt-6">
               <h3 className="text-lg font-semibold mb-3">Background Image (Optional)</h3>
@@ -590,32 +616,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Generate PowerPoint Button */}
-            <div className="mt-6">
-              <button
-                onClick={generateHymnSlides}
-                disabled={isGeneratingHymn || !selectedHymn || !selectedHymn.has_text}
-                className="w-full px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2 text-base font-medium"
-              >
-                {isGeneratingHymn ? (
-                  <>
-                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    Generating...
-                  </>
-                ) : (
-                  <>
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                    Generate Hymn Slides
-                  </>
-                )}
-              </button>
-            </div>
-            
             {hymnError && (
               <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">
                 <p className="text-red-800 text-sm">{hymnError}</p>
@@ -699,6 +699,128 @@ export default function Home() {
                 </select>
               </div>
             </div>
+          </div>
+
+          {/* Generate PowerPoint Button */}
+          <div className="mt-6">
+            <button
+              onClick={async () => {
+                setIsGeneratingScripture(true);
+                setScriptureError(null);
+                setScriptureSuccess(null);
+                try {
+                  let verses: any[] = [];
+                  let verses_alt: any[] | undefined = undefined;
+
+                  if (scriptureVersion === 'combined') {
+                    // Fetch both NRSVUE and TMB for combined mode
+                    const nrsvuePath = `/data/bibles/nrsvue/${scriptureBook}_chapter_${scriptureChapter}.json`;
+                    const tmbPath = `/data/bibles/tmb/${scriptureBook}_chapter_${scriptureChapter}.json`;
+
+                    const [nrsvueRes, tmbRes] = await Promise.all([
+                      fetch(nrsvuePath),
+                      fetch(tmbPath)
+                    ]);
+
+                    if (!nrsvueRes.ok || !tmbRes.ok) throw new Error('Chapter not found');
+
+                    const [nrsvueChapter, tmbChapter] = await Promise.all([
+                      nrsvueRes.json(),
+                      tmbRes.json()
+                    ]);
+
+                    verses = (nrsvueChapter.verses || [])
+                      .filter((v: any) => typeof v.verse === 'number' && v.verse >= scriptureStartVerse && v.verse <= scriptureEndVerse)
+                      .map((v: any) => ({ verse: v.verse, text: v.text }));
+
+                    verses_alt = (tmbChapter.verses || [])
+                      .filter((v: any) => typeof v.verse === 'number' && v.verse >= scriptureStartVerse && v.verse <= scriptureEndVerse)
+                      .map((v: any) => ({ verse: v.verse, text: v.text }));
+
+                    if (!verses.length && !verses_alt?.length) throw new Error('No verses in range');
+                  } else {
+                    // Single translation mode
+                    const chapterPath = `/data/bibles/${scriptureVersion}/${scriptureBook}_chapter_${scriptureChapter}.json`;
+                    const res = await fetch(chapterPath);
+                    if (!res.ok) throw new Error('Chapter not found');
+                    const chapter = await res.json();
+                    verses = (chapter.verses || [])
+                      .filter((v: any) => typeof v.verse === 'number' && v.verse >= scriptureStartVerse && v.verse <= scriptureEndVerse)
+                      .map((v: any) => ({ verse: v.verse, text: v.text }));
+                    if (!verses.length) throw new Error('No verses in range');
+                  }
+
+                  const body: any = { reference: { book: scriptureBook, chapter: scriptureChapter }, verses };
+                  if (verses_alt) {
+                    body.verses_alt = verses_alt;
+                  }
+                  if (backgroundImage) {
+                    const base64Image = await new Promise<string>((resolve) => {
+                      const reader = new FileReader();
+                      reader.onload = () => resolve(reader.result as string);
+                      reader.readAsDataURL(backgroundImage);
+                    });
+                    body.background_image = base64Image;
+                  } else if (selectedBackground) {
+                    // Convert selected background to base64
+                    const base64Image = await fetchImageAsBase64(selectedBackground.path);
+                    body.background_image = base64Image;
+                  } else {
+                    // Use default ocean-sunrise background
+                    const base64Image = await fetchImageAsBase64('/images/ocean-sunrise-golden-worship-background.jpg');
+                    body.background_image = base64Image;
+                  }
+
+                  const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+                  const resp = await fetch(`${apiUrl}/api/generate-scripture-slides`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body)
+                  });
+                  if (!resp.ok) {
+                    try {
+                      const err = await resp.json();
+                      throw new Error(err.error || 'Failed to generate scripture slides');
+                    } catch {
+                      throw new Error('Failed to generate scripture slides');
+                    }
+                  }
+                  const blob = await resp.blob();
+                  const url = window.URL.createObjectURL(blob);
+                  const a = document.createElement('a');
+                  a.href = url;
+                  a.download = `${scriptureBook}_${scriptureChapter}_${scriptureStartVerse}-${scriptureEndVerse}_slides.pptx`;
+                  document.body.appendChild(a);
+                  a.click();
+                  document.body.removeChild(a);
+                  window.URL.revokeObjectURL(url);
+                  setScriptureSuccess('Successfully generated scripture slides!');
+                } catch (e: any) {
+                  setScriptureError(e?.message || 'Failed to generate scripture slides');
+                } finally {
+                  setIsGeneratingScripture(false);
+                }
+              }}
+              disabled={isGeneratingScripture}
+              className="w-full px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2 text-base font-medium"
+            >
+              {isGeneratingScripture ? (
+                <>
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Generating...
+                </>
+              ) : (
+                <>
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  Generate Scripture Slides
+                </>
+              )}
+            </button>
           </div>
 
           {/* Background Image Section */}
@@ -810,128 +932,6 @@ export default function Home() {
                 </div>
               )}
             </div>
-          </div>
-
-          {/* Generate PowerPoint Button */}
-          <div className="mt-6">
-            <button
-              onClick={async () => {
-                setIsGeneratingScripture(true);
-                setScriptureError(null);
-                setScriptureSuccess(null);
-                try {
-                  let verses: any[] = [];
-                  let verses_alt: any[] | undefined = undefined;
-
-                  if (scriptureVersion === 'combined') {
-                    // Fetch both NRSVUE and TMB for combined mode
-                    const nrsvuePath = `/data/bibles/nrsvue/${scriptureBook}_chapter_${scriptureChapter}.json`;
-                    const tmbPath = `/data/bibles/tmb/${scriptureBook}_chapter_${scriptureChapter}.json`;
-                    
-                    const [nrsvueRes, tmbRes] = await Promise.all([
-                      fetch(nrsvuePath),
-                      fetch(tmbPath)
-                    ]);
-                    
-                    if (!nrsvueRes.ok || !tmbRes.ok) throw new Error('Chapter not found');
-                    
-                    const [nrsvueChapter, tmbChapter] = await Promise.all([
-                      nrsvueRes.json(),
-                      tmbRes.json()
-                    ]);
-                    
-                    verses = (nrsvueChapter.verses || [])
-                      .filter((v: any) => typeof v.verse === 'number' && v.verse >= scriptureStartVerse && v.verse <= scriptureEndVerse)
-                      .map((v: any) => ({ verse: v.verse, text: v.text }));
-                    
-                    verses_alt = (tmbChapter.verses || [])
-                      .filter((v: any) => typeof v.verse === 'number' && v.verse >= scriptureStartVerse && v.verse <= scriptureEndVerse)
-                      .map((v: any) => ({ verse: v.verse, text: v.text }));
-                    
-                    if (!verses.length && !verses_alt?.length) throw new Error('No verses in range');
-                  } else {
-                    // Single translation mode
-                    const chapterPath = `/data/bibles/${scriptureVersion}/${scriptureBook}_chapter_${scriptureChapter}.json`;
-                    const res = await fetch(chapterPath);
-                    if (!res.ok) throw new Error('Chapter not found');
-                    const chapter = await res.json();
-                    verses = (chapter.verses || [])
-                      .filter((v: any) => typeof v.verse === 'number' && v.verse >= scriptureStartVerse && v.verse <= scriptureEndVerse)
-                      .map((v: any) => ({ verse: v.verse, text: v.text }));
-                    if (!verses.length) throw new Error('No verses in range');
-                  }
-
-                  const body: any = { reference: { book: scriptureBook, chapter: scriptureChapter }, verses };
-                  if (verses_alt) {
-                    body.verses_alt = verses_alt;
-                  }
-                  if (backgroundImage) {
-                    const base64Image = await new Promise<string>((resolve) => {
-                      const reader = new FileReader();
-                      reader.onload = () => resolve(reader.result as string);
-                      reader.readAsDataURL(backgroundImage);
-                    });
-                    body.background_image = base64Image;
-                  } else if (selectedBackground) {
-                    // Convert selected background to base64
-                    const base64Image = await fetchImageAsBase64(selectedBackground.path);
-                    body.background_image = base64Image;
-                  } else {
-                    // Use default ocean-sunrise background
-                    const base64Image = await fetchImageAsBase64('/images/ocean-sunrise-golden-worship-background.jpg');
-                    body.background_image = base64Image;
-                  }
-
-                  const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
-                  const resp = await fetch(`${apiUrl}/api/generate-scripture-slides`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(body)
-                  });
-                  if (!resp.ok) {
-                    try {
-                      const err = await resp.json();
-                      throw new Error(err.error || 'Failed to generate scripture slides');
-                    } catch {
-                      throw new Error('Failed to generate scripture slides');
-                    }
-                  }
-                  const blob = await resp.blob();
-                  const url = window.URL.createObjectURL(blob);
-                  const a = document.createElement('a');
-                  a.href = url;
-                  a.download = `${scriptureBook}_${scriptureChapter}_${scriptureStartVerse}-${scriptureEndVerse}_slides.pptx`;
-                  document.body.appendChild(a);
-                  a.click();
-                  document.body.removeChild(a);
-                  window.URL.revokeObjectURL(url);
-                  setScriptureSuccess('Successfully generated scripture slides!');
-                } catch (e: any) {
-                  setScriptureError(e?.message || 'Failed to generate scripture slides');
-                } finally {
-                  setIsGeneratingScripture(false);
-                }
-              }}
-              disabled={isGeneratingScripture}
-              className="w-full px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2 text-base font-medium"
-            >
-              {isGeneratingScripture ? (
-                <>
-                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                  Generating...
-                </>
-              ) : (
-                <>
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                  Generate Scripture Slides
-                </>
-              )}
-            </button>
           </div>
 
           {scriptureError && (
