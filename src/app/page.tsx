@@ -50,7 +50,7 @@ export default function Home() {
   const [availableBackgrounds, setAvailableBackgrounds] = useState<any[]>([]);
   
   // Scripture state
-  const [scriptureVersion, setScriptureVersion] = useState<'nrsvue' | 'tmb' | 'combined'>('nrsvue');
+  const [scriptureVersion, setScriptureVersion] = useState<'nrsv' | 'nrsvue' | 'tmb' | 'combined'>('nrsvue');
   const [scriptureBook, setScriptureBook] = useState<string>('PSA');
   const [availableBooks, setAvailableBooks] = useState<{ code: string; name: string }[]>([]);
   const [scriptureChapter, setScriptureChapter] = useState<number>(23);
@@ -641,10 +641,11 @@ export default function Home() {
               <label className="block text-sm font-medium text-gray-700 mb-2">Version</label>
               <select
                 value={scriptureVersion}
-                onChange={(e) => setScriptureVersion(e.target.value as 'nrsvue' | 'tmb' | 'combined')}
+                onChange={(e) => setScriptureVersion(e.target.value as 'nrsv' | 'nrsvue' | 'tmb' | 'combined')}
                 className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               >
                 <option value="nrsvue">NRSVUE</option>
+                <option value="nrsv">NRSV</option>
                 <option value="tmb">TMB</option>
                 <option value="combined">Combined (NRSVUE + TMB)</option>
               </select>

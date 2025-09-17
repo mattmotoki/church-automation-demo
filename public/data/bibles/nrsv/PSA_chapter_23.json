@@ -1,0 +1,34 @@
+{
+  "book": "PSA",
+  "book_name": "Psalms",
+  "chapter": 23,
+  "version_id": 2016,
+  "url": "https://www.bible.com/bible/2016/PSA.23",
+  "verses": [
+    {
+      "verse": 1,
+      "text": "The Lord is my shepherd, I shall not want."
+    },
+    {
+      "verse": 2,
+      "text": "He makes me lie down in green pastures; he leads me beside still waters;"
+    },
+    {
+      "verse": 3,
+      "text": "he restores my soul. He leads me in right paths for his name's sake."
+    },
+    {
+      "verse": 4,
+      "text": "Even though I walk through the darkest valley, I fear no evil; for you are with me; your rod and your staff— they comfort me."
+    },
+    {
+      "verse": 5,
+      "text": "You prepare a table before me in the presence of my enemies; you anoint my head with oil; my cup overflows."
+    },
+    {
+      "verse": 6,
+      "text": "Surely goodness and mercy shall follow me all the days of my life, and I shall dwell in the house of the Lord my whole life long."
+    }
+  ],
+  "timestamp": "2025-09-16T19:46:28.303649"
+}
